@@ -6,14 +6,16 @@
 
 
 ## provider
-https://pub.dev/packages/provider
+[https://pub.dev/packages/provider](https://pub.dev/packages/provider)
 
 
 ## state_notifier
-https://pub.dev/packages/state_notifier
+[https://pub.dev/packages/state_notifier](https://pub.dev/packages/state_notifier)
 
 
 ## freezed
-https://pub.dev/packages/freezed
+[https://pub.dev/packages/freezed](https://pub.dev/packages/freezed)
 
 
+## flutter web
+[https://flutter.dev/docs/get-started/web](https://flutter.dev/docs/get-started/web)
