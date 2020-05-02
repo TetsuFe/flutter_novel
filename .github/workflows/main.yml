@@ -19,8 +19,9 @@ jobs:
       with:
         channel: 'beta'
     - name: Flutter analyze and test
-      - run: flutter pub get
-      - run: flutter analyze
-      - run: flutter test
+      run: |
+        flutter pub get
+        flutter analyze
+        flutter test
     - name: Flutter build web
-      - run: flutter build web
+      run: flutter build web
