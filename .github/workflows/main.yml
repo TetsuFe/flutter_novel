@@ -7,8 +7,8 @@ on:
     branches: [ master ]
 
 jobs:
-  my-job:
-    name: Flutter analyze and test
+  my-job1:
+    name: Flutter analyze and test and build web
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
@@ -18,6 +18,9 @@ jobs:
     - uses: subosito/flutter-action@v1
       with:
         channel: 'beta'
-    - run: flutter pub get
-    - run: flutter analyze
-    - run: flutter test
+    - name: Flutter analyze and test
+      - run: flutter pub get
+      - run: flutter analyze
+      - run: flutter test
+    - name: Flutter build web
+      - run: flutter build web
