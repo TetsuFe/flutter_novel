@@ -1,4 +1,4 @@
-# flutter_state_management
+# flutter_state_management ![](https://github.com/tetsufe/flutter_state_management/workflows/Flutter%20CI/badge.svg)
 
 A new Flutter application.
 
