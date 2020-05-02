@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  my-job1:
+  my-job:
     name: Flutter analyze and test and build web
     runs-on: ubuntu-latest
     steps:
@@ -24,4 +24,6 @@ jobs:
         flutter analyze
         flutter test
     - name: Flutter build web
-      run: flutter build web
+      run: |
+        flutter config --enable-web
+        flutter build web
