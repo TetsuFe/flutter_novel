@@ -19,3 +19,9 @@
 
 ## flutter web
 [https://flutter.dev/docs/get-started/web](https://flutter.dev/docs/get-started/web)
+
+$ flutter channel beta
+$ flutter upgrade
+$ flutter config --enable-web
+$ flutter create .
+$ flutter run -d chrome
