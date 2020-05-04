@@ -1,5 +1,8 @@
-# flutter_state_management ![](https://github.com/tetsufe/flutter_state_management/workflows/Flutter%20CI/badge.svg)
+# state_notifier_sample6 ![](https://github.com/tetsufe/state_notifier_sample6/workflows/Flutter%20CI/badge.svg)
 気になったFlutterの状態管理（state management）手法について試してみるサンプルリポジトリです
+6に特に意味はありません
+
+[サンプルサイト](https://tetsufe.github.io/state_notifier_sample6/)
 
 - ChangeNotifier/ValueNotifier
 - StateNotifier & Freezed
@@ -36,7 +39,7 @@ $ flutter run -d chrome
 
 本リポジトリのworkflow設定ファイルは以下です
 
-[https://github.com/TetsuFe/flutter_state_management/blob/master/.github/workflows/main.yml](https://github.com/TetsuFe/flutter_state_management/blob/master/.github/workflows/main.yml)
+[https://github.com/TetsuFe/state_notifier_sample6/blob/master/.github/workflows/main.yml](https://github.com/TetsuFe/state_notifier_sample6/blob/master/.github/workflows/main.yml)
 
 
 ### actionsの文法について
