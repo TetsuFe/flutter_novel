@@ -4,16 +4,24 @@
 
 [サンプルサイト](https://tetsufe.github.io/state_notifier_sample6/)
 
-- ChangeNotifier/ValueNotifier
 - StateNotifier & Freezed
 
+
+## 特に参考にした資料
+- [https://github.com/mono0926/wdb106-flutter/tree/state_notifier](https://github.com/mono0926/wdb106-flutter/tree/state_notifier)
 
 ## provider
 [https://pub.dev/packages/provider](https://pub.dev/packages/provider)
 
+- 本リポジトリでは、v4.10.1-dev以上のバージョンを使用
+  - BuildContextの static extension である context.select や context.read を使いたいため
+
 
 ## state_notifier
 [https://pub.dev/packages/state_notifier](https://pub.dev/packages/state_notifier)
+
+### 参考サイト
+- https://qiita.com/_masaokb/items/fe77495db0aeba226d2a
 
 
 ## freezed
