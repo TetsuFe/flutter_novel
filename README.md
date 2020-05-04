@@ -1,5 +1,6 @@
-# flutter_state_management ![](https://github.com/tetsufe/state_notifier_sample6/workflows/Flutter%20CI/badge.svg)
+# state_notifier_sample6 ![](https://github.com/tetsufe/state_notifier_sample6/workflows/Flutter%20CI/badge.svg)
 気になったFlutterの状態管理（state management）手法について試してみるサンプルリポジトリです
+6に特に意味はありません
 
 [サンプルサイト](https://tetsufe.github.io/state_notifier_sample6/)
 
