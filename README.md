@@ -70,6 +70,8 @@ $ flutter pub pub run build_runner build --delete-conflicting-outputs
 
 すでに通常の方法でflutterプロジェクトを作っている場合
 
+セットアップ＋デバッグ実行
+
 ```
 $ flutter channel beta
 $ flutter upgrade
@@ -77,6 +79,16 @@ $ flutter config --enable-web
 $ flutter create .
 $ flutter run -d chrome
 ```
+
+ビルド
+
+```
+$ flutter build web
+```
+
+特に引数を設定しなくてもリリースビルドになるらしい。
+https://flutter.dev/docs/deployment/web#building-the-app-for-release
+
 
 
 ## github actions
