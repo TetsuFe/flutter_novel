@@ -9,14 +9,18 @@ class StoryDetailsPage extends StatelessWidget {
         id: 1,
         title: 'chapter1',
         summary: 'テストストーリーです',
-        thumbnailImagePath: 'web/assets/story/1/hokuma.jpg');
+        thumbnailImagePath: 'assets/story/1/hokuma.jpg');
+
+    final windowWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
       appBar: AppBar(
         title: Text('物語の詳細'),
       ),
       body: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 200),
+          padding: windowWidth > 800
+              ? EdgeInsets.symmetric(horizontal: 140)
+              : EdgeInsets.symmetric(horizontal: 0),
           child: Center(child: StoryDetailsBody(story: story))),
     );
   }
