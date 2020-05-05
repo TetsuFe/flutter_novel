@@ -35,6 +35,8 @@
 ## freezed
 [https://pub.dev/packages/freezed](https://pub.dev/packages/freezed)
 
+コード生成
+$ flutter pub pub run build_runner build --delete-conflicting-outputs
 
 ## flutter web
 [https://flutter.dev/docs/get-started/web](https://flutter.dev/docs/get-started/web)
