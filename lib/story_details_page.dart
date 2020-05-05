@@ -10,7 +10,8 @@ class StoryDetailsPage extends StatelessWidget {
         id: 1,
         title: 'chapter1',
         summary: 'テストストーリーです',
-        thumbnailImagePath: 'assets/story/1/hokuma.jpg');
+        thumbnailImagePath: 'assets/story/1/hokuma.jpg',
+        isRead: false);
 
     final windowWidth = MediaQuery.of(context).size.width;
 

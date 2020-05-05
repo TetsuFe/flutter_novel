@@ -28,6 +28,33 @@
 - [LocatorMixin](https://pub.dev/documentation/state_notifier/latest/state_notifier/LocatorMixin-mixin.html)
 - [state_notifierのソースコード](https://github.com/rrousselGit/state_notifier/blob/master/packages/state_notifier/lib/state_notifier.dart)
 
+
+### テスト
+StateNotifier<T>.stateはprotectedなのですが、debugStateというプロパティもあり、テストをするときにはこれを利用します。
+
+```dart
+import 'package:flutter_test/flutter_test.dart';
+import 'package:flutter_state_management/story_state_notifier.dart';
+import 'package:flutter_state_management/story.dart';
+
+void main() {
+  test('StoryStateNotifier test', () {
+    final story = Story(
+        id: 1,
+        title: 'テスト',
+        summary: 'テストです',
+        thumbnailImagePath: 'assets/story/1/hokuma.jpg',
+        isRead: false);
+    final storyStateNotifier = StoryStateNotifier(story);
+    storyStateNotifier.markAsRead();
+    expect(
+      storyStateNotifier.debugState,
+      story.copyWith(isRead: true),
+    );
+  });
+}
+```
+
 ### 参考サイト
 - https://qiita.com/_masaokb/items/fe77495db0aeba226d2a
 
