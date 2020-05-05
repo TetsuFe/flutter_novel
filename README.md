@@ -74,3 +74,22 @@ $ flutter run -d chrome
 
 ## その他
 https://hachibeechan.hateblo.jp/entry/change-notifier-does-not-solve-anything-by-itselfs
+
+
+## web関連のtips
+
+### mediaquery
+https://qiita.com/najeira/items/c98c5fec9c71104f8263
+
+```dart
+    final windowWidth = MediaQuery.of(context).size.width;
+
+    return 
+      Padding(
+          padding: windowWidth > 800
+              ? EdgeInsets.symmetric(horizontal: 140)
+              : EdgeInsets.symmetric(horizontal: 0),
+          child: Container()
+```
+
+
