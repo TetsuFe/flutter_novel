@@ -16,9 +16,17 @@
 - 本リポジトリでは、v4.10.1-dev以上のバージョンを使用
   - BuildContextの static extension である context.select や context.read を使いたいため
 
+- [Consumer](https://pub.dev/documentation/provider/latest/provider/Consumer-class.html)
+  - contextが取得できないタイミングで使う
+- [Selector]()
+  - クラスの一部のメンバーに対して更新をlistenする
 
 ## state_notifier
 [https://pub.dev/packages/state_notifier](https://pub.dev/packages/state_notifier)
+
+
+- [LocatorMixin](https://pub.dev/documentation/state_notifier/latest/state_notifier/LocatorMixin-mixin.html)
+- [state_notifierのソースコード](https://github.com/rrousselGit/state_notifier/blob/master/packages/state_notifier/lib/state_notifier.dart)
 
 ### 参考サイト
 - https://qiita.com/_masaokb/items/fe77495db0aeba226d2a
@@ -27,6 +35,8 @@
 ## freezed
 [https://pub.dev/packages/freezed](https://pub.dev/packages/freezed)
 
+コード生成
+$ flutter pub pub run build_runner build --delete-conflicting-outputs
 
 ## flutter web
 [https://flutter.dev/docs/get-started/web](https://flutter.dev/docs/get-started/web)
@@ -60,3 +70,7 @@ $ flutter run -d chrome
 - [https://qiita.com/taigamikami/items/348878ee606cf9352e84](https://qiita.com/taigamikami/items/348878ee606cf9352e84)
     - [v3とv2の差分](https://github.com/peaceiris/actions-gh-pages/issues/123)
 - [https://help.github.com/ja/actions/configuring-and-managing-workflows/authenticating-with-the-github_token](https://help.github.com/ja/actions/configuring-and-managing-workflows/authenticating-with-the-github_token)
+
+
+## その他
+https://hachibeechan.hateblo.jp/entry/change-notifier-does-not-solve-anything-by-itselfs
