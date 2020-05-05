@@ -78,7 +78,7 @@ https://hachibeechan.hateblo.jp/entry/change-notifier-does-not-solve-anything-by
 
 ## web関連のtips
 
-### mediaquery
+### 1. mediaquery
 https://qiita.com/najeira/items/c98c5fec9c71104f8263
 
 ```dart
@@ -93,7 +93,7 @@ https://qiita.com/najeira/items/c98c5fec9c71104f8263
 ```
 
 
-### assets
+### 2. assets
 画像のデバッグ時はキャッシュの削除を忘れないようにしましょう。これで少しハマりました。
 
 web/assets/story/1/hokuma.jpg を表示させないとします
@@ -115,7 +115,7 @@ Image.network('assets/story/1/hokuma.jpg'),
 ```
 
 
-### パイパーリング
+### 3. パイパーリング
 サンプル
 
 ![サンプル画像](https://github.com/TetsuFe/state_notifier_sample6/blob/master/docs/images/hyperlink_sample.png)
@@ -150,4 +150,11 @@ GestureDetector(
 ```
 
 
+### 4. スクローラブル
+ページを縦横にスクロールできるように、SingleChildScrollViewを使います
 
+```dart
+return Scaffold(
+  body: SingleChildScrollView(
+    child: ...
+```
