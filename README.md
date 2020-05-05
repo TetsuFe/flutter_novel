@@ -1,4 +1,4 @@
-# state_notifier_sample6 ![](https://github.com/tetsufe/state_notifier_sample6/workflows/Flutter%20CI/badge.svg)
+# state_notifier_sample6 ![](https://github.com/tetsufe/state_notifier_sample6/workflows/Flutter%20CI/badge.svg) [![codecov](https://codecov.io/gh/TetsuFe/state_notifier_sample6/branch/master/graph/badge.svg)](https://codecov.io/gh/TetsuFe/state_notifier_sample6)
 気になったFlutterの状態管理（state management）手法について試してみるサンプルリポジトリです
 6に特に意味はありません
 
@@ -97,6 +97,12 @@ https://flutter.dev/docs/deployment/web#building-the-app-for-release
 本リポジトリのworkflow設定ファイルは以下です
 
 [https://github.com/TetsuFe/state_notifier_sample6/blob/master/.github/workflows/main.yml](https://github.com/TetsuFe/state_notifier_sample6/blob/master/.github/workflows/main.yml)
+
+
+### codecovとの連携
+カバレッジの計測はしたことがなかったのですが、こちらのサイトまんまの設定で簡単にテストカバレッジを設定できました。
+
+https://flutter.takuchalle.dev/posts/how-to-test-coverage-on-github-actions/
 
 
 ### actionsの文法について
