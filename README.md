@@ -93,3 +93,23 @@ https://qiita.com/najeira/items/c98c5fec9c71104f8263
 ```
 
 
+### assets
+画像のデバッグ時はキャッシュの削除を忘れないようにしましょう。これで少しハマりました。
+
+web/assets/story/1/hokuma.jpg を表示させないとします
+
+1. まず web/ 配下に　assets/story/1/hokuma.jpg ファイルをディレクトリと一緒に作成します
+2. pubspec.yamlに以下を追記します
+
+```dart
+flutter:
+  assets:
+   - web/assets/
+```
+
+3. Imageウィジェットの使い方
+以下のようにImage.networkを使ってアクセスできます
+
+```dart
+Image.network('assets/story/1/hokuma.jpg'),
+```
