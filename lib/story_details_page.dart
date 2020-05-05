@@ -18,28 +18,30 @@ class StoryDetailsPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('物語の詳細'),
       ),
-      body: Padding(
-        padding: windowWidth > 800
-            ? EdgeInsets.symmetric(horizontal: 140)
-            : EdgeInsets.symmetric(horizontal: 0),
-        child: Column(
-          children: [
-            Center(
-              child: StoryDetailsBody(story: story),
-            ),
-            GestureDetector(
-              onTap: () {
-                launch('https://github.com/tetsufe/state_notifier_sample6/');
-              },
-              child: Text(
-                'GitHubリポジトリはこちら',
-                style: TextStyle(
-                  decoration: TextDecoration.underline,
-                  color: Colors.blue,
-                ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: windowWidth > 800
+              ? EdgeInsets.symmetric(horizontal: 140)
+              : EdgeInsets.symmetric(horizontal: 0),
+          child: Column(
+            children: [
+              Center(
+                child: StoryDetailsBody(story: story),
               ),
-            ),
-          ],
+              GestureDetector(
+                onTap: () {
+                  launch('https://github.com/tetsufe/state_notifier_sample6/');
+                },
+                child: Text(
+                  'GitHubリポジトリはこちら',
+                  style: TextStyle(
+                    decoration: TextDecoration.underline,
+                    color: Colors.blue,
+                  ),
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
