@@ -18,11 +18,17 @@ jobs:
     - uses: subosito/flutter-action@v1
       with:
         channel: 'beta'
+
     - name: Flutter analyze and test
       run: |
         flutter pub get
         flutter analyze
-        flutter test
+        flutter test --coverage
+    - name: upload coverage
+      uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+
     - name: Flutter build web
       run: |
         flutter config --enable-web
