@@ -1,18 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_state_management/story.dart';
 import 'package:flutter_state_management/story_details_body.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class StoryDetailsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final story = Story(
-        id: 1,
-        title: 'chapter1',
-        summary: 'テストストーリーです',
-        thumbnailImagePath: 'assets/story/1/hokuma.jpg',
-        isRead: false);
-
     final windowWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
@@ -27,7 +19,7 @@ class StoryDetailsPage extends StatelessWidget {
           child: Column(
             children: [
               Center(
-                child: StoryDetailsBody(story: story),
+                child: StoryDetailsBody(),
               ),
               GestureDetector(
                 onTap: () {
