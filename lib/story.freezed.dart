@@ -16,12 +16,14 @@ class _$StoryTearOff {
       {@required int id,
       @required String title,
       @required String summary,
-      @required String thumbnailImagePath}) {
+      @required String thumbnailImagePath,
+      @required bool isRead}) {
     return _Story(
       id: id,
       title: title,
       summary: summary,
       thumbnailImagePath: thumbnailImagePath,
+      isRead: isRead,
     );
   }
 }
@@ -34,6 +36,7 @@ mixin _$Story {
   String get title;
   String get summary;
   String get thumbnailImagePath;
+  bool get isRead;
 
   $StoryCopyWith<Story> get copyWith;
 }
@@ -41,7 +44,12 @@ mixin _$Story {
 abstract class $StoryCopyWith<$Res> {
   factory $StoryCopyWith(Story value, $Res Function(Story) then) =
       _$StoryCopyWithImpl<$Res>;
-  $Res call({int id, String title, String summary, String thumbnailImagePath});
+  $Res call(
+      {int id,
+      String title,
+      String summary,
+      String thumbnailImagePath,
+      bool isRead});
 }
 
 class _$StoryCopyWithImpl<$Res> implements $StoryCopyWith<$Res> {
@@ -57,6 +65,7 @@ class _$StoryCopyWithImpl<$Res> implements $StoryCopyWith<$Res> {
     Object title = freezed,
     Object summary = freezed,
     Object thumbnailImagePath = freezed,
+    Object isRead = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as int,
@@ -65,6 +74,7 @@ class _$StoryCopyWithImpl<$Res> implements $StoryCopyWith<$Res> {
       thumbnailImagePath: thumbnailImagePath == freezed
           ? _value.thumbnailImagePath
           : thumbnailImagePath as String,
+      isRead: isRead == freezed ? _value.isRead : isRead as bool,
     ));
   }
 }
@@ -73,7 +83,12 @@ abstract class _$StoryCopyWith<$Res> implements $StoryCopyWith<$Res> {
   factory _$StoryCopyWith(_Story value, $Res Function(_Story) then) =
       __$StoryCopyWithImpl<$Res>;
   @override
-  $Res call({int id, String title, String summary, String thumbnailImagePath});
+  $Res call(
+      {int id,
+      String title,
+      String summary,
+      String thumbnailImagePath,
+      bool isRead});
 }
 
 class __$StoryCopyWithImpl<$Res> extends _$StoryCopyWithImpl<$Res>
@@ -90,6 +105,7 @@ class __$StoryCopyWithImpl<$Res> extends _$StoryCopyWithImpl<$Res>
     Object title = freezed,
     Object summary = freezed,
     Object thumbnailImagePath = freezed,
+    Object isRead = freezed,
   }) {
     return _then(_Story(
       id: id == freezed ? _value.id : id as int,
@@ -98,6 +114,7 @@ class __$StoryCopyWithImpl<$Res> extends _$StoryCopyWithImpl<$Res>
       thumbnailImagePath: thumbnailImagePath == freezed
           ? _value.thumbnailImagePath
           : thumbnailImagePath as String,
+      isRead: isRead == freezed ? _value.isRead : isRead as bool,
     ));
   }
 }
@@ -107,11 +124,13 @@ class _$_Story implements _Story {
       {@required this.id,
       @required this.title,
       @required this.summary,
-      @required this.thumbnailImagePath})
+      @required this.thumbnailImagePath,
+      @required this.isRead})
       : assert(id != null),
         assert(title != null),
         assert(summary != null),
-        assert(thumbnailImagePath != null);
+        assert(thumbnailImagePath != null),
+        assert(isRead != null);
 
   @override
   final int id;
@@ -121,10 +140,12 @@ class _$_Story implements _Story {
   final String summary;
   @override
   final String thumbnailImagePath;
+  @override
+  final bool isRead;
 
   @override
   String toString() {
-    return 'Story(id: $id, title: $title, summary: $summary, thumbnailImagePath: $thumbnailImagePath)';
+    return 'Story(id: $id, title: $title, summary: $summary, thumbnailImagePath: $thumbnailImagePath, isRead: $isRead)';
   }
 
   @override
@@ -140,7 +161,9 @@ class _$_Story implements _Story {
                     .equals(other.summary, summary)) &&
             (identical(other.thumbnailImagePath, thumbnailImagePath) ||
                 const DeepCollectionEquality()
-                    .equals(other.thumbnailImagePath, thumbnailImagePath)));
+                    .equals(other.thumbnailImagePath, thumbnailImagePath)) &&
+            (identical(other.isRead, isRead) ||
+                const DeepCollectionEquality().equals(other.isRead, isRead)));
   }
 
   @override
@@ -149,7 +172,8 @@ class _$_Story implements _Story {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(title) ^
       const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(thumbnailImagePath);
+      const DeepCollectionEquality().hash(thumbnailImagePath) ^
+      const DeepCollectionEquality().hash(isRead);
 
   @override
   _$StoryCopyWith<_Story> get copyWith =>
@@ -161,7 +185,8 @@ abstract class _Story implements Story {
       {@required int id,
       @required String title,
       @required String summary,
-      @required String thumbnailImagePath}) = _$_Story;
+      @required String thumbnailImagePath,
+      @required bool isRead}) = _$_Story;
 
   @override
   int get id;
@@ -171,6 +196,8 @@ abstract class _Story implements Story {
   String get summary;
   @override
   String get thumbnailImagePath;
+  @override
+  bool get isRead;
   @override
   _$StoryCopyWith<_Story> get copyWith;
 }

@@ -7,7 +7,10 @@
         {
             "name": "Flutter",
             "request": "launch",
-            "type": "dart"
+            "type": "dart",
+            "args": [
+                // for master or dev channel: "--web-enable-expression-evaluation"
+            ]
         }
     ]
 }
