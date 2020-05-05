@@ -113,3 +113,41 @@ flutter:
 ```dart
 Image.network('assets/story/1/hokuma.jpg'),
 ```
+
+
+### パイパーリング
+サンプル
+
+![サンプル画像](https://github.com/TetsuFe/state_notifier_sample6/blob/master/docs/images/hyperlink_sample.png)
+
+https://pub.dev/packages/url_launcher_web を使います
+
+pubspec.yamlに以下を記述
+
+```yaml
+dependencies:
+  url_launcher: ^5.1.4
+  url_launcher_web: ^0.1.0
+```
+
+使い方
+
+```dart
+import 'package:url_launcher/url_launcher.dart';
+
+GestureDetector(
+  onTap: () {
+    launch('https://github.com/tetsufe/state_notifier_sample6/');
+  },
+  child: Text(
+    'GitHubリポジトリはこちら',
+    style: TextStyle(
+      decoration: TextDecoration.underline,
+      color: Colors.blue,
+    ),
+  ),
+),
+```
+
+
+
