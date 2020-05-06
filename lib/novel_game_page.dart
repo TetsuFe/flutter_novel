@@ -12,9 +12,6 @@ class NovelGamePage extends StatelessWidget {
     return StateNotifierProvider<SentenceStateNotifier, SentenceState>(
       create: (context) => SentenceStateNotifier(),
       child: Scaffold(
-        appBar: AppBar(
-          title: Text('ノベルゲームページ'),
-        ),
         body: NovelGamePageBody(),
       ),
     );
