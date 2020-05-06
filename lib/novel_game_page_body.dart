@@ -3,10 +3,24 @@ import 'package:flutter_state_management/sentence/sentence_state.dart';
 import 'package:flutter_state_management/sentence/sentence_state_notifier.dart';
 import 'package:provider/provider.dart';
 
-class NovelGageTextArea extends StatelessWidget {
+class NovelGamePageBody extends StatefulWidget {
+  @override
+  _NovelGamePageBodyState createState() => _NovelGamePageBodyState();
+}
+
+class _NovelGamePageBodyState extends State<NovelGamePageBody> {
+  bool _isReadingStoryFinished = false;
+
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return AnimatedOpacity(
+      // If the widget is visible, animate to 0.0 (invisible).
+      // If the widget is hidden, animate to 1.0 (fully visible).
+      opacity: _isReadingStoryFinished ? 0.0 : 1.0,
+      duration: Duration(milliseconds: 500),
+      onEnd: () {
+        Navigator.of(context).pop();
+      },
       child: Column(
         children: [
           Expanded(
@@ -20,6 +34,12 @@ class NovelGageTextArea extends StatelessWidget {
             flex: 3,
             child: GestureDetector(
               onTap: () {
+                if (context.read<SentenceState>().isLastSentence) {
+                  setState(() {
+                    _isReadingStoryFinished = true;
+                  });
+                  return;
+                }
                 context.read<SentenceStateNotifier>().goToNextSentence();
               },
               child: Padding(
