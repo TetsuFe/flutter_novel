@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_state_management/story.dart';
+import 'package:flutter_state_management/story/story.dart';
 import 'package:provider/provider.dart';
-import 'package:flutter_state_management/story_details_page.dart';
-import 'package:flutter_state_management/story_state_notifier.dart';
+import 'package:flutter_state_management/story/story_details_page.dart';
+import 'package:flutter_state_management/story/story_state_notifier.dart';
 import 'package:flutter_state_notifier/flutter_state_notifier.dart';
 
 class App extends StatelessWidget {
@@ -12,7 +12,7 @@ class App extends StatelessWidget {
         id: 1,
         title: 'chapter1',
         summary: 'テストストーリーです',
-        thumbnailImagePath: 'assets/story/1/hokuma.jpg',
+        thumbnailImagePath: 'assets/story/story/1/hokuma.jpg',
         isRead: false);
 
     return MaterialApp(

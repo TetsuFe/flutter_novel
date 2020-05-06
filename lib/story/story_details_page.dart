@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_state_management/story_details_body.dart';
+import 'package:flutter_state_management/story/story_details_body.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class StoryDetailsPage extends StatelessWidget {

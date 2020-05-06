@@ -1,4 +1,4 @@
-import 'package:flutter_state_management/sentence_state.dart';
+import 'package:flutter_state_management/sentence/sentence_state.dart';
 import 'package:state_notifier/state_notifier.dart';
 
 import 'sentence.dart';

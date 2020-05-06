@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_state_management/novel_game_text_area.dart';
-import 'package:flutter_state_management/sentence_state.dart';
-import 'package:flutter_state_management/sentence_state_notifier.dart';
+import 'package:flutter_state_management/sentence/sentence_state.dart';
+import 'package:flutter_state_management/sentence/sentence_state_notifier.dart';
 import 'package:flutter_state_notifier/flutter_state_notifier.dart';
 
-import 'sentence_state_notifier.dart';
+import 'sentence/sentence_state_notifier.dart';
 
 class NovelGamePage extends StatelessWidget {
   @override
