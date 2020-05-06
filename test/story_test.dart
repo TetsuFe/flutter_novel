@@ -1,6 +1,6 @@
-import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_state_management/story/story_state_notifier.dart';
 import 'package:flutter_state_management/story/story.dart';
+import 'package:flutter_state_management/story/story_state_notifier.dart';
+import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   test('StoryStateNotifier test', () {
@@ -8,7 +8,7 @@ void main() {
         id: 1,
         title: 'テスト',
         summary: 'テストです',
-        thumbnailImagePath: 'assets/story//1/hokuma.jpg',
+        thumbnailImagePath: 'assets/story/1/hokuma.jpg',
         isRead: false);
     final storyStateNotifier = StoryStateNotifier(story);
     storyStateNotifier.markAsRead();
