@@ -19,9 +19,9 @@ class _VTweetAnimationContainerState extends State<VTweetAnimationContainer>
   Animation<Alignment> animation;
   Animation<Alignment> animation2;
   final tween1 =
-      AlignmentTween(begin: Alignment.center, end: Alignment.topRight);
-  final tween2 =
       AlignmentTween(begin: Alignment.center, end: Alignment.topLeft);
+  final tween2 =
+      AlignmentTween(begin: Alignment.center, end: Alignment.topRight);
 
   _VTweetAnimationContainerState({@required this.child});
 
