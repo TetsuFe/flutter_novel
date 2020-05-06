@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_state_management/novel/v_tween_animation_container.dart';
 import 'package:flutter_state_management/sentence/sentence_state.dart';
 import 'package:flutter_state_management/sentence/sentence_state_notifier.dart';
 import 'package:provider/provider.dart';
@@ -31,9 +32,28 @@ class _NovelGamePageBodyState extends State<NovelGamePageBody> {
               fit: BoxFit.cover,
             ),
           ),
-          Center(
-              child: Image.network(context.select<SentenceState, String>(
-                  (s) => s.currentCharecterImagePath))),
+          Center(child: Builder(
+            builder: (_) {
+              final currentCharecterImagePath =
+                  context.select<SentenceState, String>(
+                      (s) => s.currentCharecterImagePath);
+              if (currentCharecterImagePath ==
+                  'assets/character_images/ypose_hokuma.png') {
+                return Container(
+                    width: double.infinity,
+                    height: double.infinity,
+                    child: VTweetAnimationContainer(
+                        child: Container(
+                            width: 600,
+                            height: 600,
+                            child: Image.network(currentCharecterImagePath))));
+              }
+              return Container(
+                  width: 600,
+                  height: 600,
+                  child: Image.network(currentCharecterImagePath));
+            },
+          )),
           Align(
             alignment: Alignment.bottomCenter,
             child: GestureDetector(
