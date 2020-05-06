@@ -44,13 +44,17 @@ class _NovelGamePageBodyState extends State<NovelGamePageBody> {
                     height: double.infinity,
                     child: VTweetAnimationContainer(
                         child: Container(
-                            width: 600,
-                            height: 600,
+                            width: MediaQuery.of(context).size.height > 600
+                                ? 400
+                                : 240,
+                            height: MediaQuery.of(context).size.height > 600
+                                ? 400
+                                : 240,
                             child: Image.network(currentCharecterImagePath))));
               }
               return Container(
-                  width: 600,
-                  height: 600,
+                  width: MediaQuery.of(context).size.height > 600 ? 400 : 240,
+                  height: MediaQuery.of(context).size.height > 600 ? 400 : 240,
                   child: Image.network(currentCharecterImagePath));
             },
           )),
