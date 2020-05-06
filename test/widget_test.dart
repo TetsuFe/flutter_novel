@@ -17,7 +17,7 @@ void main() {
             Story(
                 id: 1,
                 isRead: false,
-                thumbnailImagePath: '../assets/story/story/1/hokuma.jpg',
+                thumbnailImagePath: '../assets/story//1/hokuma.jpg',
                 title: '',
                 summary: ''),
           ),

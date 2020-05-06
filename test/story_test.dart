@@ -8,7 +8,7 @@ void main() {
         id: 1,
         title: 'テスト',
         summary: 'テストです',
-        thumbnailImagePath: 'assets/story/story/1/hokuma.jpg',
+        thumbnailImagePath: 'assets/story//1/hokuma.jpg',
         isRead: false);
     final storyStateNotifier = StoryStateNotifier(story);
     storyStateNotifier.markAsRead();
