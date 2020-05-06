@@ -21,17 +21,18 @@ class _NovelGamePageBodyState extends State<NovelGamePageBody> {
       onEnd: () {
         Navigator.of(context).pop();
       },
-      child: Column(
+      child: Stack(
         children: [
-          Expanded(
-            flex: 7,
+          Container(
+            height: double.infinity,
+            width: double.infinity,
             child: Image.network(
               'https://userdisk.webry.biglobe.ne.jp/012/472/52/N000/000/000/BG26a_80.jpg',
-              fit: BoxFit.contain,
+              fit: BoxFit.cover,
             ),
           ),
-          Expanded(
-            flex: 3,
+          Align(
+            alignment: Alignment.bottomCenter,
             child: GestureDetector(
               onTap: () {
                 if (context.read<SentenceState>().isLastSentence) {
@@ -43,19 +44,21 @@ class _NovelGamePageBodyState extends State<NovelGamePageBody> {
                 context.read<SentenceStateNotifier>().goToNextSentence();
               },
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 64),
+                padding: EdgeInsets.only(left: 64, bottom: 32, right: 64),
                 child: Container(
                   width: double.infinity,
+                  height: 100,
                   color: Colors.green[400],
                   child: Text(
                     context.select<SentenceState, String>(
                         (s) => s.currentSentence),
+                    maxLines: 3,
                     style: TextStyle(color: Colors.white, fontSize: 16),
                   ),
                 ),
               ),
             ),
-          )
+          ),
         ],
       ),
     );
