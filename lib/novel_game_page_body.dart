@@ -31,6 +31,9 @@ class _NovelGamePageBodyState extends State<NovelGamePageBody> {
               fit: BoxFit.cover,
             ),
           ),
+          Center(
+              child: Image.network(context.select<SentenceState, String>(
+                  (s) => s.currentCharecterImagePath))),
           Align(
             alignment: Alignment.bottomCenter,
             child: GestureDetector(

@@ -17,4 +17,11 @@ abstract class SentenceState with _$SentenceState {
 
   @late
   String get currentSentence => sentenceList[sentenceIndex].body;
+
+  @late
+  String get currentCharecterImagePath =>
+      sentenceList[sentenceIndex].characterImagePath;
+
+  @late
+  String get currentCharecterName => sentenceList[sentenceIndex].characterName;
 }

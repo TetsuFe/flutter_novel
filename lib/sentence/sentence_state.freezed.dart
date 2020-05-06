@@ -143,9 +143,34 @@ class _$_SentenceState implements _SentenceState {
     return _currentSentence;
   }
 
+  bool _didcurrentCharecterImagePath = false;
+  String _currentCharecterImagePath;
+
+  @override
+  String get currentCharecterImagePath {
+    if (_didcurrentCharecterImagePath == false) {
+      _didcurrentCharecterImagePath = true;
+      _currentCharecterImagePath =
+          sentenceList[sentenceIndex].characterImagePath;
+    }
+    return _currentCharecterImagePath;
+  }
+
+  bool _didcurrentCharecterName = false;
+  String _currentCharecterName;
+
+  @override
+  String get currentCharecterName {
+    if (_didcurrentCharecterName == false) {
+      _didcurrentCharecterName = true;
+      _currentCharecterName = sentenceList[sentenceIndex].characterName;
+    }
+    return _currentCharecterName;
+  }
+
   @override
   String toString() {
-    return 'SentenceState(sentenceList: $sentenceList, sentenceIndex: $sentenceIndex, sentenceListLength: $sentenceListLength, isLastSentence: $isLastSentence, currentSentence: $currentSentence)';
+    return 'SentenceState(sentenceList: $sentenceList, sentenceIndex: $sentenceIndex, sentenceListLength: $sentenceListLength, isLastSentence: $isLastSentence, currentSentence: $currentSentence, currentCharecterImagePath: $currentCharecterImagePath, currentCharecterName: $currentCharecterName)';
   }
 
   @override

@@ -9,15 +9,15 @@ class SentenceStateNotifier extends StateNotifier<SentenceState> {
       : super(SentenceState(sentenceIndex: 0, sentenceList: [
           Sentence(
             storyId: 1,
-            body: 'テスト1',
-            characterName: '',
-            characterImagePath: '',
+            body: 'こんにちは、ホクマだクマ。state_notifierを使ってみたクマ！',
+            characterName: 'ホクマ',
+            characterImagePath: 'assets/character_images/neutral_hokuma.png',
           ),
           Sentence(
             storyId: 1,
-            body: 'テスト2',
-            characterName: '',
-            characterImagePath: '',
+            body: '次回に続くクマ！',
+            characterName: 'ホクマ',
+            characterImagePath: 'assets/character_images/ypose_hokuma.png',
           )
         ]));
 
