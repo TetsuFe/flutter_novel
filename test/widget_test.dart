@@ -10,7 +10,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_state_management/story_details_body.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:image_test_utils/image_test_utils.dart';
-import 'package:provider/provider.dart';
 import 'package:flutter_state_notifier/flutter_state_notifier.dart';
 import 'package:flutter_state_management/story_state_notifier.dart';
 import 'package:flutter_state_management/story.dart';
