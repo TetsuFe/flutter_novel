@@ -53,9 +53,8 @@ class _NovelGamePageBodyState extends State<NovelGamePageBody> {
                   height: 100,
                   color: Colors.green[400].withAlpha(150),
                   child: Text(
-                    context.select<SentenceState, String>(
-                        (s) => s.currentSentence),
-                    maxLines: 3,
+                    "【${context.select<SentenceState, String>((s) => s.currentCharecterName)}】\n"
+                    "${context.select<SentenceState, String>((s) => s.currentSentence)}",
                     style: TextStyle(color: Colors.white, fontSize: 16),
                   ),
                 ),
