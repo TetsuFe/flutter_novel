@@ -20,30 +20,33 @@ class StoryListPage extends StatelessWidget {
               shrinkWrap: true,
               itemCount: 1,
               primary: true,
-              itemBuilder: (context, index) => ListTile(
-                  title: Text('chapter1'),
-                  onTap: () {
-                    final story = Story(
-                        id: 1,
-                        title: 'chapter1',
-                        summary: 'テストストーリーです',
-                        thumbnailImagePath: 'assets/story/1/hokuma.jpg',
-                        isRead: false);
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) {
-                          return MultiProvider(
-                            providers: [
-                              StateNotifierProvider<StoryStateNotifier, Story>(
-                                create: (_) => StoryStateNotifier(story),
-                              )
-                            ],
-                            child: StoryDetailsPage(),
-                          );
-                        },
-                      ),
-                    );
-                  }),
+              itemBuilder: (context, index) => Card(
+                child: ListTile(
+                    title: Text('chapter1'),
+                    onTap: () {
+                      final story = Story(
+                          id: 1,
+                          title: 'chapter1',
+                          summary: 'テストストーリーです',
+                          thumbnailImagePath: 'assets/story/1/hokuma.jpg',
+                          isRead: false);
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return MultiProvider(
+                              providers: [
+                                StateNotifierProvider<StoryStateNotifier,
+                                    Story>(
+                                  create: (_) => StoryStateNotifier(story),
+                                )
+                              ],
+                              child: StoryDetailsPage(),
+                            );
+                          },
+                        ),
+                      );
+                    }),
+              ),
             ),
             Padding(
               padding: EdgeInsets.symmetric(vertical: 32),
