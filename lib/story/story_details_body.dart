@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_state_management/novel_game_page.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter_state_management/novel/novel_game_page.dart';
 import 'package:flutter_state_management/story/story.dart';
 import 'package:flutter_state_management/story/story_state_notifier.dart';
+import 'package:provider/provider.dart';
 
 class StoryDetailsBody extends StatelessWidget {
   @override
