@@ -31,6 +31,10 @@ void main() {
       await tester.pumpAndSettle();
 
       await tester.tap(find.byType(GestureDetector));
+
+      // wait animation
+      await tester.pumpAndSettle(Duration(seconds: 2));
+
       await tester.tap(find.byType(GestureDetector));
       await tester.pumpAndSettle();
 
