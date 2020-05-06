@@ -48,7 +48,7 @@ class _NovelGamePageBodyState extends State<NovelGamePageBody> {
                 child: Container(
                   width: double.infinity,
                   height: 100,
-                  color: Colors.green[400],
+                  color: Colors.green[400].withAlpha(150),
                   child: Text(
                     context.select<SentenceState, String>(
                         (s) => s.currentSentence),
