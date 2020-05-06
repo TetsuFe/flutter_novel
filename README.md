@@ -39,30 +39,9 @@ https://github.com/TetsuFe/state_notifier_sample6/wiki/%E3%83%86%E3%82%B9%E3%83%
 コード生成
 $ flutter pub pub run build_runner build --delete-conflicting-outputs
 
-## flutter web
-[https://flutter.dev/docs/get-started/web](https://flutter.dev/docs/get-started/web)
 
-すでに通常の方法でflutterプロジェクトを作っている場合
-
-セットアップ＋デバッグ実行
-
-```
-$ flutter channel beta
-$ flutter upgrade
-$ flutter config --enable-web
-$ flutter create .
-$ flutter run -d chrome
-```
-
-ビルド
-
-```
-$ flutter build web
-```
-
-特に引数を設定しなくてもリリースビルドになるらしい。
-https://flutter.dev/docs/deployment/web#building-the-app-for-release
-
+## flutter web 関連
+https://github.com/TetsuFe/state_notifier_sample6/wiki/Web%E9%96%A2%E9%80%A3%E3%81%AETips
 
 
 ## github actions
@@ -71,7 +50,3 @@ https://github.com/TetsuFe/state_notifier_sample6/wiki/GitHub-Actions
 
 ## その他
 https://hachibeechan.hateblo.jp/entry/change-notifier-does-not-solve-anything-by-itselfs
-
-
-## web関連のtips
-https://github.com/TetsuFe/state_notifier_sample6/wiki/Web%E9%96%A2%E9%80%A3%E3%81%AETips
