@@ -9,7 +9,7 @@ import 'package:image_test_utils/image_test_utils.dart';
 void main() {
   testWidgets('marks as read a story when open novel game page',
       (WidgetTester tester) async {
-    provideMockedNetworkImages(() async {
+    await provideMockedNetworkImages(() async {
       await tester.pumpWidget(
         StateNotifierProvider<StoryStateNotifier, Story>(
           child: MaterialApp(home: Scaffold(body: StoryDetailsBody())),
@@ -33,7 +33,7 @@ void main() {
       await tester.tap(find.byType(GestureDetector));
 
       // wait animation
-      await tester.pumpAndSettle(Duration(seconds: 2));
+      await tester.pumpAndSettle(const Duration(seconds: 2));
 
       await tester.tap(find.byType(GestureDetector));
       await tester.pumpAndSettle();

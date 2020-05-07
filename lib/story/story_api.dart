@@ -6,7 +6,7 @@ class StoryApi {
     try {
       return fb.firestore().collection('stories').onSnapshot.map(
           (event) => event.docs.map((e) => Story.fromJson(e.data())).toList());
-    } catch (e) {
+    } on Exception catch (_) {
       throw Exception('なんらかのエラーが発生しました');
     }
   }

@@ -10,8 +10,7 @@ void main() {
         summary: 'テストです',
         thumbnailImagePath: 'assets/story/1/hokuma.jpg',
         isRead: false);
-    final storyStateNotifier = StoryStateNotifier(story);
-    storyStateNotifier.markAsRead();
+    final storyStateNotifier = StoryStateNotifier(story)..markAsRead();
     expect(
       storyStateNotifier.debugState,
       story.copyWith(isRead: true),

@@ -8,13 +8,13 @@ class StoryDetailsPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('物語の詳細'),
+        title: const Text('物語の詳細'),
       ),
       body: SingleChildScrollView(
         child: Padding(
           padding: windowWidth > 800
-              ? EdgeInsets.symmetric(horizontal: 140)
-              : EdgeInsets.symmetric(horizontal: 0),
+              ? const EdgeInsets.symmetric(horizontal: 140)
+              : const EdgeInsets.symmetric(horizontal: 0),
           child: Column(
             children: [
               Center(

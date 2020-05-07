@@ -8,7 +8,7 @@ class StoryDetailsBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      SizedBox(height: 50),
+      const SizedBox(height: 50),
       Text(
         '${context.select<Story, String>((s) => s.title)}',
         style: Theme.of(context).textTheme.headline2,
@@ -27,20 +27,20 @@ class StoryDetailsBody extends StatelessWidget {
       Image.network(
         context.select<Story, String>((s) => s.thumbnailImagePath),
       ),
-      SizedBox(height: 50),
+      const SizedBox(height: 50),
       Text(
         context.select<Story, String>((s) => s.summary),
       ),
-      SizedBox(height: 50),
+      const SizedBox(height: 50),
       Align(
         alignment: Alignment.centerRight,
         child: FlatButton(
-          child: Text('見る'),
+          child: const Text('見る'),
           color: Colors.lightGreen,
           textColor: Colors.white,
           onPressed: () {
             context.read<StoryStateNotifier>().markAsRead();
-            Navigator.of(context).push(
+            Navigator.of(context).push<MaterialPageRoute>(
               MaterialPageRoute(
                 builder: (context) {
                   return NovelGamePage();

@@ -12,7 +12,7 @@ class StoryListPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('ストーリー選択'),
+        title: const Text('ストーリー選択'),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -21,7 +21,7 @@ class StoryListPage extends StatelessWidget {
                 stream: StoryApi().getStoryList(),
                 builder: (context, AsyncSnapshot<dynamic> snapshot) {
                   if (!snapshot.hasData) {
-                    return Center(child: CircularProgressIndicator());
+                    return const Center(child: CircularProgressIndicator());
                   }
                   final storyList = snapshot.data as List<Story>;
                   return ListView.builder(
@@ -30,9 +30,9 @@ class StoryListPage extends StatelessWidget {
                     primary: true,
                     itemBuilder: (context, index) => Card(
                       child: ListTile(
-                          title: Text('chapter1'),
+                          title: const Text('chapter1'),
                           onTap: () {
-                            Navigator.of(context).push(
+                            Navigator.of(context).push<MaterialPageRoute>(
                               MaterialPageRoute(
                                 builder: (context) {
                                   return MultiProvider(
@@ -53,12 +53,12 @@ class StoryListPage extends StatelessWidget {
                   );
                 }),
             Padding(
-              padding: EdgeInsets.symmetric(vertical: 32),
+              padding: const EdgeInsets.symmetric(vertical: 32),
               child: GestureDetector(
                 onTap: () {
                   launch('https://github.com/tetsufe/state_notifier_sample6/');
                 },
-                child: Text(
+                child: const Text(
                   'GitHubリポジトリはこちら',
                   style: TextStyle(
                     decoration: TextDecoration.underline,

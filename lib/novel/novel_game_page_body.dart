@@ -18,7 +18,7 @@ class _NovelGamePageBodyState extends State<NovelGamePageBody> {
       // If the widget is visible, animate to 0.0 (invisible).
       // If the widget is hidden, animate to 1.0 (fully visible).
       opacity: _isReadingStoryFinished ? 0.0 : 1.0,
-      duration: Duration(milliseconds: 500),
+      duration: const Duration(milliseconds: 500),
       onEnd: () {
         Navigator.of(context).pop();
       },
@@ -71,15 +71,19 @@ class _NovelGamePageBodyState extends State<NovelGamePageBody> {
                 context.read<SentenceStateNotifier>().goToNextSentence();
               },
               child: Padding(
-                padding: EdgeInsets.only(left: 64, bottom: 32, right: 64),
+                padding: const EdgeInsets.only(left: 64, bottom: 32, right: 64),
                 child: Container(
                   width: double.infinity,
                   height: 100,
                   color: Colors.green[400].withAlpha(150),
                   child: Text(
-                    "【${context.select<SentenceState, String>((s) => s.currentCharecterName)}】\n"
-                    "${context.select<SentenceState, String>((s) => s.currentSentence)}",
-                    style: TextStyle(color: Colors.white, fontSize: 16),
+                    '【${context.select<SentenceState, String>((s) {
+                      return s.currentCharecterName;
+                    })}】\n'
+                    '${context.select<SentenceState, String>((s) {
+                      return s.currentSentence;
+                    })}',
+                    style: const TextStyle(color: Colors.white, fontSize: 16),
                   ),
                 ),
               ),
