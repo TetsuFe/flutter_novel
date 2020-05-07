@@ -14,7 +14,7 @@ class NovelGamePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return StateNotifierProvider<SentenceStateNotifier, SentenceState>(
-      create: (context) => SentenceStateNotifier(storyId: 1),
+      create: (context) => SentenceStateNotifier(storyId: storyId),
       child: Scaffold(
         body: NovelGamePageBody(),
       ),
