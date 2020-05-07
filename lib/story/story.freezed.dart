@@ -8,6 +8,9 @@ part of 'story.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+Story _$StoryFromJson(Map<String, dynamic> json) {
+  return _Story.fromJson(json);
+}
 
 class _$StoryTearOff {
   const _$StoryTearOff();
@@ -38,6 +41,7 @@ mixin _$Story {
   String get thumbnailImagePath;
   bool get isRead;
 
+  Map<String, dynamic> toJson();
   $StoryCopyWith<Story> get copyWith;
 }
 
@@ -119,6 +123,7 @@ class __$StoryCopyWithImpl<$Res> extends _$StoryCopyWithImpl<$Res>
   }
 }
 
+@JsonSerializable()
 class _$_Story implements _Story {
   _$_Story(
       {@required this.id,
@@ -131,6 +136,9 @@ class _$_Story implements _Story {
         assert(summary != null),
         assert(thumbnailImagePath != null),
         assert(isRead != null);
+
+  factory _$_Story.fromJson(Map<String, dynamic> json) =>
+      _$_$_StoryFromJson(json);
 
   @override
   final int id;
@@ -178,6 +186,11 @@ class _$_Story implements _Story {
   @override
   _$StoryCopyWith<_Story> get copyWith =>
       __$StoryCopyWithImpl<_Story>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_StoryToJson(this);
+  }
 }
 
 abstract class _Story implements Story {
@@ -187,6 +200,8 @@ abstract class _Story implements Story {
       @required String summary,
       @required String thumbnailImagePath,
       @required bool isRead}) = _$_Story;
+
+  factory _Story.fromJson(Map<String, dynamic> json) = _$_Story.fromJson;
 
   @override
   int get id;
