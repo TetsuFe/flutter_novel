@@ -15,10 +15,11 @@ analyzer:
   exclude:
     - lib/l10n/messages_*.dart
     - ios/**
-    - lib/sentence/*.g.dart
-    - lib/sentence/*.freezed.dart
-    - lib/story/*.g.dart
-    - lib/story/*.freezed.dart
+    - lib/sentence/sentence.g.dart
+    - lib/sentence/sentence.freezed.dart
+    - lib/sentence/sentence_state.freezed.dart
+    - lib/story/story.g.dart
+    - lib/story/story.freezed.dart
 linter:
   rules:
     - always_declare_return_types
