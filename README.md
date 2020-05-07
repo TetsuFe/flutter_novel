@@ -2,7 +2,8 @@
 気になったFlutterの状態管理（state management）手法について試してみるサンプルリポジトリです
 6に特に意味はありません
 
-[サンプルサイト](https://tetsufe.github.io/state_notifier_sample6/)
+[サンプルサイト](https://tetsufe.github.io/state_notifier_sample6/#/)
+[サンプルサイト(Firebase Hosting版)](https://state-notifier-sample6.web.app/#/)
 
 - StateNotifier & Freezed
 
