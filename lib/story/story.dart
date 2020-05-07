@@ -4,7 +4,6 @@ import 'package:json_annotation/json_annotation.dart';
 part 'story.freezed.dart';
 part 'story.g.dart';
 
-@JsonSerializable(nullable: false)
 @freezed
 abstract class Story with _$Story {
   factory Story({
@@ -16,5 +15,4 @@ abstract class Story with _$Story {
   }) = _Story;
 
   factory Story.fromJson(Map<String, dynamic> json) => _$StoryFromJson(json);
-  Map<String, dynamic> toJson() => _$StoryToJson(this);
 }

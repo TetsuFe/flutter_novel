@@ -6,12 +6,6 @@ part of 'story.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Story _$StoryFromJson(Map<String, dynamic> json) {
-  return Story();
-}
-
-Map<String, dynamic> _$StoryToJson(Story instance) => <String, dynamic>{};
-
 _$_Story _$_$_StoryFromJson(Map<String, dynamic> json) {
   return _$_Story(
     id: json['id'] as int,
