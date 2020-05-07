@@ -7,10 +7,14 @@ import 'package:flutter_state_notifier/flutter_state_notifier.dart';
 import '../sentence/sentence_state_notifier.dart';
 
 class NovelGamePage extends StatelessWidget {
+  const NovelGamePage({@required this.storyId});
+
+  final int storyId;
+
   @override
   Widget build(BuildContext context) {
     return StateNotifierProvider<SentenceStateNotifier, SentenceState>(
-      create: (context) => SentenceStateNotifier(),
+      create: (context) => SentenceStateNotifier(storyId: 1),
       child: Scaffold(
         body: NovelGamePageBody(),
       ),

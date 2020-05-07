@@ -42,8 +42,10 @@ class StoryDetailsBody extends StatelessWidget {
             context.read<StoryStateNotifier>().markAsRead();
             Navigator.of(context).push<MaterialPageRoute>(
               MaterialPageRoute(
-                builder: (context) {
-                  return NovelGamePage();
+                builder: (_) {
+                  return NovelGamePage(
+                    storyId: context.select<Story, int>((s) => s.id),
+                  );
                 },
               ),
             );

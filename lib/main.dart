@@ -1,6 +1,8 @@
 import 'package:firebase/firebase.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_state_management/app.dart';
+import 'package:flutter_state_management/story/story_api.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   final firebaseApp = initializeApp(
@@ -14,5 +16,5 @@ void main() {
       measurementId: 'G-B1DLNXQ4HN');
 
   analytics(firebaseApp);
-  runApp(RootApp());
+  runApp(Provider(create: (_) => StoryApi(), child: RootApp()));
 }

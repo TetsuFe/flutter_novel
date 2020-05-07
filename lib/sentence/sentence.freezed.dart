@@ -8,6 +8,9 @@ part of 'sentence.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+Sentence _$SentenceFromJson(Map<String, dynamic> json) {
+  return _Sentence.fromJson(json);
+}
 
 class _$SentenceTearOff {
   const _$SentenceTearOff();
@@ -35,6 +38,7 @@ mixin _$Sentence {
   String get body;
   String get characterImagePath;
 
+  Map<String, dynamic> toJson();
   $SentenceCopyWith<Sentence> get copyWith;
 }
 
@@ -114,6 +118,7 @@ class __$SentenceCopyWithImpl<$Res> extends _$SentenceCopyWithImpl<$Res>
   }
 }
 
+@JsonSerializable()
 class _$_Sentence implements _Sentence {
   _$_Sentence(
       {@required this.storyId,
@@ -124,6 +129,9 @@ class _$_Sentence implements _Sentence {
         assert(characterName != null),
         assert(body != null),
         assert(characterImagePath != null);
+
+  factory _$_Sentence.fromJson(Map<String, dynamic> json) =>
+      _$_$_SentenceFromJson(json);
 
   @override
   final int storyId;
@@ -167,6 +175,11 @@ class _$_Sentence implements _Sentence {
   @override
   _$SentenceCopyWith<_Sentence> get copyWith =>
       __$SentenceCopyWithImpl<_Sentence>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_SentenceToJson(this);
+  }
 }
 
 abstract class _Sentence implements Sentence {
@@ -175,6 +188,8 @@ abstract class _Sentence implements Sentence {
       @required String characterName,
       @required String body,
       @required String characterImagePath}) = _$_Sentence;
+
+  factory _Sentence.fromJson(Map<String, dynamic> json) = _$_Sentence.fromJson;
 
   @override
   int get storyId;

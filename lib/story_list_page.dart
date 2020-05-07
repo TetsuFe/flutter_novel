@@ -30,7 +30,7 @@ class StoryListPage extends StatelessWidget {
                     primary: true,
                     itemBuilder: (context, index) => Card(
                       child: ListTile(
-                          title: const Text('chapter1'),
+                          title: Text(storyList[index].title),
                           onTap: () {
                             Navigator.of(context).push<MaterialPageRoute>(
                               MaterialPageRoute(
