@@ -9,16 +9,39 @@ class SentenceStateNotifier extends StateNotifier<SentenceState>
   SentenceStateNotifier({@required this.storyId})
       : super(SentenceState(sentenceIndex: 0, sentenceList: [
           Sentence(
-              storyId: 1, characterName: '', body: '', characterImagePath: '')
+              storyId: null,
+              characterName: null,
+              body: null,
+              characterImagePath: null)
         ]));
 
   final int storyId;
 
   @override
   Future<void> initState() async {
-    final storySentenceList =
-        await read<StoryApi>().getStorySentenceList(storyId.toString());
-    state = state.copyWith(sentenceList: storySentenceList);
+    try {
+      final sentenceList =
+          await read<StoryApi>().getStorySentenceList(storyId.toString());
+      state = state.copyWith(sentenceList: sentenceList);
+    } on Exception {
+      state = state.copyWith(sentenceList: [
+        Sentence(
+            storyId: 1,
+            characterName: 'ホクマ',
+            body: 'state_notifierとfreezedを使ったサンプルを書いたクマ！',
+            characterImagePath: 'assets/character_images/neutral_hokuma.png'),
+        Sentence(
+            storyId: 1,
+            characterName: 'ホクマ',
+            body: 'なぜかFirestore関連？のバグで動かないクマ・・',
+            characterImagePath: 'assets/character_images/neutral_hokuma.png'),
+        Sentence(
+            storyId: 1,
+            characterName: 'ホクマ',
+            body: '近日中にアップデートするクマ！',
+            characterImagePath: 'assets/character_images/ypose_hokuma.png')
+      ]);
+    }
   }
 
   void goToNextSentence() {
