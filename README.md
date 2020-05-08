@@ -23,12 +23,7 @@
   - クラスの一部のメンバーに対して更新をlistenする
 
 ## state_notifier
-[https://pub.dev/packages/state_notifier](https://pub.dev/packages/state_notifier)
-
-
-- [LocatorMixin](https://pub.dev/documentation/state_notifier/latest/state_notifier/LocatorMixin-mixin.html)
-- [state_notifierのソースコード](https://github.com/rrousselGit/state_notifier/blob/master/packages/state_notifier/lib/state_notifier.dart)
-
+https://github.com/TetsuFe/state_notifier_sample6/wiki/state_notifier
 
 ### テスト
 https://github.com/TetsuFe/state_notifier_sample6/wiki/%E3%83%86%E3%82%B9%E3%83%88tips
@@ -37,9 +32,7 @@ https://github.com/TetsuFe/state_notifier_sample6/wiki/%E3%83%86%E3%82%B9%E3%83%
 ## freezed
 [https://pub.dev/packages/freezed](https://pub.dev/packages/freezed)
 
-コード生成
-$ flutter pub pub run build_runner build --delete-conflicting-outputs
-
+https://github.com/TetsuFe/state_notifier_sample6/wiki/freezed
 
 ## flutter web 関連
 https://github.com/TetsuFe/state_notifier_sample6/wiki/Web%E9%96%A2%E9%80%A3%E3%81%AETips
