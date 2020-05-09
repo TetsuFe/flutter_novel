@@ -4,7 +4,7 @@
 - [サンプルサイト](https://tetsufe.github.io/state_notifier_sample6/#/)
 - [サンプルサイト(Firebase Hosting版)](https://state-notifier-sample6.web.app/#/)
 
-## 主なライブラリ
+## 主に使用したライブラリ
 - StateNotifier
 - Freezed
 - Provider
