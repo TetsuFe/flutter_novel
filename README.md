@@ -1,11 +1,14 @@
 # state_notifier_sample6 ![](https://github.com/tetsufe/state_notifier_sample6/workflows/Flutter%20CI/badge.svg) [![codecov](https://codecov.io/gh/TetsuFe/state_notifier_sample6/branch/master/graph/badge.svg)](https://codecov.io/gh/TetsuFe/state_notifier_sample6)
-気になったFlutterの状態管理（state management）手法について試してみるサンプルリポジトリです
-6に特に意味はありません
+気になったFlutterの状態管理（state management）手法について試してみるサンプルリポジトリです（6に特に意味はありません）
 
-[サンプルサイト](https://tetsufe.github.io/state_notifier_sample6/#/)
-[サンプルサイト(Firebase Hosting版)](https://state-notifier-sample6.web.app/#/)
+- [サンプルサイト](https://tetsufe.github.io/state_notifier_sample6/#/)
+- [サンプルサイト(Firebase Hosting版)](https://state-notifier-sample6.web.app/#/)
 
-- StateNotifier & Freezed
+## 主なライブラリ
+- StateNotifier
+- Freezed
+- Provider
+- Firebase
 
 
 ## 特に参考にした資料
