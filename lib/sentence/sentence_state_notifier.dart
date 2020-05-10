@@ -9,10 +9,7 @@ class SentenceStateNotifier extends StateNotifier<SentenceState>
   SentenceStateNotifier({@required this.storyId})
       : super(SentenceState(sentenceIndex: 0, sentenceList: [
           Sentence(
-              storyId: null,
-              characterName: null,
-              body: null,
-              characterImagePath: null)
+              storyId: 1, characterName: '', body: '', characterImagePath: '')
         ]));
 
   final int storyId;
@@ -21,7 +18,7 @@ class SentenceStateNotifier extends StateNotifier<SentenceState>
   Future<void> initState() async {
     try {
       final sentenceList =
-          await read<StoryApi>().getStorySentenceList(storyId.toString());
+          await StoryApi().getStorySentenceList(storyId.toString());
       state = state.copyWith(sentenceList: sentenceList);
     } on Exception {
       state = state.copyWith(sentenceList: [
@@ -33,7 +30,7 @@ class SentenceStateNotifier extends StateNotifier<SentenceState>
         Sentence(
             storyId: 1,
             characterName: 'ホクマ',
-            body: 'なぜかFirestore関連？のバグで動かないクマ・・',
+            body: 'なぜかバグで動かないクマ・・',
             characterImagePath: 'assets/character_images/neutral_hokuma.png'),
         Sentence(
             storyId: 1,
