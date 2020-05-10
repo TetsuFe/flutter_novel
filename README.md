@@ -1,11 +1,14 @@
 # state_notifier_sample6 ![](https://github.com/tetsufe/state_notifier_sample6/workflows/Flutter%20CI/badge.svg) [![codecov](https://codecov.io/gh/TetsuFe/state_notifier_sample6/branch/master/graph/badge.svg)](https://codecov.io/gh/TetsuFe/state_notifier_sample6)
-気になったFlutterの状態管理（state management）手法について試してみるサンプルリポジトリです
-6に特に意味はありません
+気になったFlutterの状態管理（state management）手法について試してみるサンプルリポジトリです（6に特に意味はありません）
 
-[サンプルサイト](https://tetsufe.github.io/state_notifier_sample6/#/)
-[サンプルサイト(Firebase Hosting版)](https://state-notifier-sample6.web.app/#/)
+- [サンプルサイト](https://tetsufe.github.io/state_notifier_sample6/#/)
+- [サンプルサイト(Firebase Hosting版)](https://state-notifier-sample6.web.app/#/)
 
-- StateNotifier & Freezed
+## 主に使用したライブラリ
+- StateNotifier
+- Freezed
+- Provider
+- Firebase
 
 
 ## 特に参考にした資料
@@ -23,12 +26,7 @@
   - クラスの一部のメンバーに対して更新をlistenする
 
 ## state_notifier
-[https://pub.dev/packages/state_notifier](https://pub.dev/packages/state_notifier)
-
-
-- [LocatorMixin](https://pub.dev/documentation/state_notifier/latest/state_notifier/LocatorMixin-mixin.html)
-- [state_notifierのソースコード](https://github.com/rrousselGit/state_notifier/blob/master/packages/state_notifier/lib/state_notifier.dart)
-
+https://github.com/TetsuFe/state_notifier_sample6/wiki/state_notifier
 
 ### テスト
 https://github.com/TetsuFe/state_notifier_sample6/wiki/%E3%83%86%E3%82%B9%E3%83%88tips
@@ -37,9 +35,7 @@ https://github.com/TetsuFe/state_notifier_sample6/wiki/%E3%83%86%E3%82%B9%E3%83%
 ## freezed
 [https://pub.dev/packages/freezed](https://pub.dev/packages/freezed)
 
-コード生成
-$ flutter pub pub run build_runner build --delete-conflicting-outputs
-
+https://github.com/TetsuFe/state_notifier_sample6/wiki/freezed
 
 ## flutter web 関連
 https://github.com/TetsuFe/state_notifier_sample6/wiki/Web%E9%96%A2%E9%80%A3%E3%81%AETips
