@@ -1,1 +1,1 @@
-# flutter_novel ![](https://github.com/tetsufe/lutter_novel/workflows/Flutter%20CI/badge.svg) [![codecov](https://codecov.io/gh/TetsuFe/lutter_novel/branch/master/graph/badge.svg)](https://codecov.io/gh/TetsuFe/lutter_novel)
+# flutter_novel ![](https://github.com/tetsufe/flutter_novel/workflows/Flutter%20CI/badge.svg) [![codecov](https://codecov.io/gh/TetsuFe/flutter_novel/branch/master/graph/badge.svg)](https://codecov.io/gh/TetsuFe/flutter_novel)
