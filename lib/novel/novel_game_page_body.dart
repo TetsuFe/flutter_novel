@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_state_management/novel/collision_animated_novel_background.dart';
 import 'package:flutter_state_management/novel/v_tween_animation_container.dart';
 import 'package:flutter_state_management/sentence/sentence_state.dart';
 import 'package:flutter_state_management/sentence/sentence_state_notifier.dart';
@@ -10,7 +11,8 @@ class NovelGamePageBody extends StatefulWidget {
 }
 
 class _NovelGamePageBodyState extends State<NovelGamePageBody> {
-  bool _isReadingStoryFinished = false;
+  final bool _isReadingStoryFinished = false;
+  bool _isBackgroundAnimated = false;
 
   @override
   Widget build(BuildContext context) {
@@ -24,9 +26,13 @@ class _NovelGamePageBodyState extends State<NovelGamePageBody> {
       },
       child: Stack(
         children: [
-          Container(
-            height: double.infinity,
-            width: double.infinity,
+          CollisionAnimatedNovelBackground(
+            animated: _isBackgroundAnimated,
+            onEnd: () {
+              setState(() {
+                _isBackgroundAnimated = false;
+              });
+            },
             child: Image.network(
               'https://userdisk.webry.biglobe.ne.jp/012/472/52/N000/000/000/BG26a_80.jpg',
               fit: BoxFit.cover,
@@ -64,7 +70,8 @@ class _NovelGamePageBodyState extends State<NovelGamePageBody> {
               onTap: () {
                 if (context.read<SentenceState>().isLastSentence) {
                   setState(() {
-                    _isReadingStoryFinished = true;
+                    // _isReadingStoryFinished = true;
+                    _isBackgroundAnimated = true;
                   });
                   return;
                 }
