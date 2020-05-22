@@ -7,7 +7,6 @@ part 'sentence.g.dart';
 @freezed
 abstract class Sentence with _$Sentence {
   factory Sentence({
-    @required int storyId,
     @required String characterName,
     @required String body,
     @required String characterImagePath,
