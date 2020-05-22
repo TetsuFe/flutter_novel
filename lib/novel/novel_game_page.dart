@@ -16,7 +16,9 @@ class NovelGamePage extends StatelessWidget {
     return StateNotifierProvider<SentenceStateNotifier, SentenceState>(
       create: (context) => SentenceStateNotifier(storyId: storyId),
       child: Scaffold(
-        body: NovelGamePageBody(),
+        body: NovelGamePageBody(
+          storyId: storyId,
+        ),
       ),
     );
   }

@@ -6,12 +6,21 @@ import 'package:flutter_state_management/sentence/sentence_state_notifier.dart';
 import 'package:provider/provider.dart';
 
 class NovelGamePageBody extends StatefulWidget {
+  const NovelGamePageBody({@required this.storyId});
+
+  final int storyId;
+
   @override
-  _NovelGamePageBodyState createState() => _NovelGamePageBodyState();
+  _NovelGamePageBodyState createState() =>
+      _NovelGamePageBodyState(storyId: storyId);
 }
 
 class _NovelGamePageBodyState extends State<NovelGamePageBody> {
-  final bool _isReadingStoryFinished = false;
+  _NovelGamePageBodyState({@required this.storyId});
+
+  final int storyId;
+
+  bool _isReadingStoryFinished = false;
   bool _isBackgroundAnimated = false;
 
   @override
@@ -70,10 +79,14 @@ class _NovelGamePageBodyState extends State<NovelGamePageBody> {
               onTap: () {
                 if (context.read<SentenceState>().isLastSentence) {
                   setState(() {
-                    // _isReadingStoryFinished = true;
+                    _isReadingStoryFinished = true;
+                  });
+                }
+                if (storyId == 3 &&
+                    context.read<SentenceState>().sentenceIndex == 1) {
+                  setState(() {
                     _isBackgroundAnimated = true;
                   });
-                  return;
                 }
                 context.read<SentenceStateNotifier>().goToNextSentence();
               },
