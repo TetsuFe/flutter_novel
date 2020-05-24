@@ -42528,7 +42528,7 @@ $1:function(a){return new Y.xO(H.b([V.a1m(null,new K.PQ(this.a,this.b),u.B9,u.uc
 K.PQ.prototype={
 $1:function(a){return new B.qX(new P.jq(u.mA),J.V(this.a,this.b))}}
 K.PV.prototype={
-$0:function(){T.WR("https://github.com/tetsufe/state_notifier_sample6/")},
+$0:function(){T.WR("https://github.com/TetsuFe/flutter_novel/")},
 $S:0}
 V.VO.prototype={
 $1$0:function(a){var t,s
