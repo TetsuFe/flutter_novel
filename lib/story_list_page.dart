@@ -56,7 +56,7 @@ class StoryListPage extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 32),
               child: GestureDetector(
                 onTap: () {
-                  launch('https://github.com/tetsufe/state_notifier_sample6/');
+                  launch('https://github.com/TetsuFe/flutter_novel/');
                 },
                 child: const Text(
                   'GitHubリポジトリはこちら',
