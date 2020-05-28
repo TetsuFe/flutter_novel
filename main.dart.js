@@ -42200,7 +42200,7 @@ $1:function(a){return new E.qK(this.a.c,new L.Lr(),!1,new P.jq(u.re),new N.rr(H.
 O.pX.prototype={
 au:function(){return new O.Dw(C.n)}}
 O.Dw.prototype={
-F:function(a){var t,s,r=null,q=this.d?0:1,p=M.fu(r,U.Kp("https://userdisk.webry.biglobe.ne.jp/012/472/52/N000/000/000/BG26a_80.jpg",C.nj),r,r,r,1/0,r,r,1/0),o=C.w9.h(0,400).a
+F:function(a){var t,s,r=null,q=this.d?0:1,p=M.fu(r,U.Kp("assets/background_images/classroom.jpg",C.nj),r,r,r,1/0,r,r,1/0),o=C.w9.h(0,400).a
 o=P.bb(150,(16711680&o)>>>16,(65280&o)>>>8,(255&o)>>>0)
 t=u.ua
 s=u.X
