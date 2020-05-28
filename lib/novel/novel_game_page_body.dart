@@ -43,7 +43,7 @@ class _NovelGamePageBodyState extends State<NovelGamePageBody> {
               });
             },
             child: Image.network(
-              'https://userdisk.webry.biglobe.ne.jp/012/472/52/N000/000/000/BG26a_80.jpg',
+              'assets/background_images/classroom.jpg',
               fit: BoxFit.cover,
             ),
           ),

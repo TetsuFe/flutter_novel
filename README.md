@@ -2,6 +2,10 @@
 
 FlutterでノベルゲームUIを作るプロジェクトです。
 
- ## サイト
- https://tetsufe.github.io/flutter_novel/#/
+
+## サイト
+https://tetsufe.github.io/flutter_novel/#/
  
+
+## コード生成
+flutter pub pub run build_runner build --delete-conflicting-outputs
