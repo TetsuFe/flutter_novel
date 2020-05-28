@@ -20,6 +20,8 @@ analyzer:
     - lib/sentence/sentence_state.freezed.dart
     - lib/story/story.g.dart
     - lib/story/story.freezed.dart
+  enable-experiment:
+    - non-nullable
 linter:
   rules:
     - always_declare_return_types
