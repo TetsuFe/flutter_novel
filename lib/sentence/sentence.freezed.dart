@@ -16,12 +16,10 @@ class _$SentenceTearOff {
   const _$SentenceTearOff();
 
   _Sentence call(
-      {@required int storyId,
-      @required String characterName,
+      {@required String characterName,
       @required String body,
       @required String characterImagePath}) {
     return _Sentence(
-      storyId: storyId,
       characterName: characterName,
       body: body,
       characterImagePath: characterImagePath,
@@ -33,7 +31,6 @@ class _$SentenceTearOff {
 const $Sentence = _$SentenceTearOff();
 
 mixin _$Sentence {
-  int get storyId;
   String get characterName;
   String get body;
   String get characterImagePath;
@@ -45,11 +42,7 @@ mixin _$Sentence {
 abstract class $SentenceCopyWith<$Res> {
   factory $SentenceCopyWith(Sentence value, $Res Function(Sentence) then) =
       _$SentenceCopyWithImpl<$Res>;
-  $Res call(
-      {int storyId,
-      String characterName,
-      String body,
-      String characterImagePath});
+  $Res call({String characterName, String body, String characterImagePath});
 }
 
 class _$SentenceCopyWithImpl<$Res> implements $SentenceCopyWith<$Res> {
@@ -61,13 +54,11 @@ class _$SentenceCopyWithImpl<$Res> implements $SentenceCopyWith<$Res> {
 
   @override
   $Res call({
-    Object storyId = freezed,
     Object characterName = freezed,
     Object body = freezed,
     Object characterImagePath = freezed,
   }) {
     return _then(_value.copyWith(
-      storyId: storyId == freezed ? _value.storyId : storyId as int,
       characterName: characterName == freezed
           ? _value.characterName
           : characterName as String,
@@ -83,11 +74,7 @@ abstract class _$SentenceCopyWith<$Res> implements $SentenceCopyWith<$Res> {
   factory _$SentenceCopyWith(_Sentence value, $Res Function(_Sentence) then) =
       __$SentenceCopyWithImpl<$Res>;
   @override
-  $Res call(
-      {int storyId,
-      String characterName,
-      String body,
-      String characterImagePath});
+  $Res call({String characterName, String body, String characterImagePath});
 }
 
 class __$SentenceCopyWithImpl<$Res> extends _$SentenceCopyWithImpl<$Res>
@@ -100,13 +87,11 @@ class __$SentenceCopyWithImpl<$Res> extends _$SentenceCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object storyId = freezed,
     Object characterName = freezed,
     Object body = freezed,
     Object characterImagePath = freezed,
   }) {
     return _then(_Sentence(
-      storyId: storyId == freezed ? _value.storyId : storyId as int,
       characterName: characterName == freezed
           ? _value.characterName
           : characterName as String,
@@ -121,20 +106,16 @@ class __$SentenceCopyWithImpl<$Res> extends _$SentenceCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Sentence implements _Sentence {
   _$_Sentence(
-      {@required this.storyId,
-      @required this.characterName,
+      {@required this.characterName,
       @required this.body,
       @required this.characterImagePath})
-      : assert(storyId != null),
-        assert(characterName != null),
+      : assert(characterName != null),
         assert(body != null),
         assert(characterImagePath != null);
 
   factory _$_Sentence.fromJson(Map<String, dynamic> json) =>
       _$_$_SentenceFromJson(json);
 
-  @override
-  final int storyId;
   @override
   final String characterName;
   @override
@@ -144,16 +125,13 @@ class _$_Sentence implements _Sentence {
 
   @override
   String toString() {
-    return 'Sentence(storyId: $storyId, characterName: $characterName, body: $body, characterImagePath: $characterImagePath)';
+    return 'Sentence(characterName: $characterName, body: $body, characterImagePath: $characterImagePath)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _Sentence &&
-            (identical(other.storyId, storyId) ||
-                const DeepCollectionEquality()
-                    .equals(other.storyId, storyId)) &&
             (identical(other.characterName, characterName) ||
                 const DeepCollectionEquality()
                     .equals(other.characterName, characterName)) &&
@@ -167,7 +145,6 @@ class _$_Sentence implements _Sentence {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(storyId) ^
       const DeepCollectionEquality().hash(characterName) ^
       const DeepCollectionEquality().hash(body) ^
       const DeepCollectionEquality().hash(characterImagePath);
@@ -184,15 +161,12 @@ class _$_Sentence implements _Sentence {
 
 abstract class _Sentence implements Sentence {
   factory _Sentence(
-      {@required int storyId,
-      @required String characterName,
+      {@required String characterName,
       @required String body,
       @required String characterImagePath}) = _$_Sentence;
 
   factory _Sentence.fromJson(Map<String, dynamic> json) = _$_Sentence.fromJson;
 
-  @override
-  int get storyId;
   @override
   String get characterName;
   @override
