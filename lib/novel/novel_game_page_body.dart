@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_state_management/novel/collision_animated_novel_background.dart';
+import 'package:flutter_state_management/novel/novel_game_background_image.dart';
 import 'package:flutter_state_management/novel/v_tween_animation_container.dart';
 import 'package:flutter_state_management/sentence/sentence_state.dart';
 import 'package:flutter_state_management/sentence/sentence_state_notifier.dart';
@@ -42,10 +43,8 @@ class _NovelGamePageBodyState extends State<NovelGamePageBody> {
                 _isBackgroundAnimated = false;
               });
             },
-            child: Image.network(
-              'assets/background_images/classroom.jpg',
-              fit: BoxFit.cover,
-            ),
+            child: const NovelGameBackgroundImage(
+                backgroundImagePath: 'assets/background_images/classroom.jpg'),
           ),
           Center(child: Builder(
             builder: (_) {
