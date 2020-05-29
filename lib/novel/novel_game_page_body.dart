@@ -43,8 +43,10 @@ class _NovelGamePageBodyState extends State<NovelGamePageBody> {
                 _isBackgroundAnimated = false;
               });
             },
-            child: const NovelGameBackgroundImage(
-                backgroundImagePath: 'assets/background_images/classroom.jpg'),
+            child: NovelGameBackgroundImage(
+                backgroundImagePath: storyId == 3
+                    ? 'assets/background_images/hallway.jpg'
+                    : 'assets/background_images/classroom.jpg'),
           ),
           Center(child: Builder(
             builder: (_) {
