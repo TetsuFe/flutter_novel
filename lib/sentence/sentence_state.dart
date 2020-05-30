@@ -24,4 +24,8 @@ abstract class SentenceState with _$SentenceState {
 
   @late
   String get currentCharecterName => sentenceList[sentenceIndex].characterName;
+
+  @late
+  String get currentCharecterImageEffect =>
+      sentenceList[sentenceIndex].characterImageEffect;
 }
