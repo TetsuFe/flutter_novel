@@ -35,9 +35,11 @@ class CharacterImageContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
     return Container(
-      width: MediaQuery.of(context).size.height > 600 ? 400 : 240,
-      height: MediaQuery.of(context).size.height > 600 ? 400 : 240,
+      width: screenWidth / 2,
+      height: screenHeight / 2,
       child: Image.network(charecterImagePath),
     );
   }
