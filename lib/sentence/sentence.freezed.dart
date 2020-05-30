@@ -18,11 +18,13 @@ class _$SentenceTearOff {
   _Sentence call(
       {@required String characterName,
       @required String body,
-      @required String characterImagePath}) {
+      @required String characterImagePath,
+      @required String characterImageEffect}) {
     return _Sentence(
       characterName: characterName,
       body: body,
       characterImagePath: characterImagePath,
+      characterImageEffect: characterImageEffect,
     );
   }
 }
@@ -34,6 +36,7 @@ mixin _$Sentence {
   String get characterName;
   String get body;
   String get characterImagePath;
+  String get characterImageEffect;
 
   Map<String, dynamic> toJson();
   $SentenceCopyWith<Sentence> get copyWith;
@@ -42,7 +45,11 @@ mixin _$Sentence {
 abstract class $SentenceCopyWith<$Res> {
   factory $SentenceCopyWith(Sentence value, $Res Function(Sentence) then) =
       _$SentenceCopyWithImpl<$Res>;
-  $Res call({String characterName, String body, String characterImagePath});
+  $Res call(
+      {String characterName,
+      String body,
+      String characterImagePath,
+      String characterImageEffect});
 }
 
 class _$SentenceCopyWithImpl<$Res> implements $SentenceCopyWith<$Res> {
@@ -57,6 +64,7 @@ class _$SentenceCopyWithImpl<$Res> implements $SentenceCopyWith<$Res> {
     Object characterName = freezed,
     Object body = freezed,
     Object characterImagePath = freezed,
+    Object characterImageEffect = freezed,
   }) {
     return _then(_value.copyWith(
       characterName: characterName == freezed
@@ -66,6 +74,9 @@ class _$SentenceCopyWithImpl<$Res> implements $SentenceCopyWith<$Res> {
       characterImagePath: characterImagePath == freezed
           ? _value.characterImagePath
           : characterImagePath as String,
+      characterImageEffect: characterImageEffect == freezed
+          ? _value.characterImageEffect
+          : characterImageEffect as String,
     ));
   }
 }
@@ -74,7 +85,11 @@ abstract class _$SentenceCopyWith<$Res> implements $SentenceCopyWith<$Res> {
   factory _$SentenceCopyWith(_Sentence value, $Res Function(_Sentence) then) =
       __$SentenceCopyWithImpl<$Res>;
   @override
-  $Res call({String characterName, String body, String characterImagePath});
+  $Res call(
+      {String characterName,
+      String body,
+      String characterImagePath,
+      String characterImageEffect});
 }
 
 class __$SentenceCopyWithImpl<$Res> extends _$SentenceCopyWithImpl<$Res>
@@ -90,6 +105,7 @@ class __$SentenceCopyWithImpl<$Res> extends _$SentenceCopyWithImpl<$Res>
     Object characterName = freezed,
     Object body = freezed,
     Object characterImagePath = freezed,
+    Object characterImageEffect = freezed,
   }) {
     return _then(_Sentence(
       characterName: characterName == freezed
@@ -99,6 +115,9 @@ class __$SentenceCopyWithImpl<$Res> extends _$SentenceCopyWithImpl<$Res>
       characterImagePath: characterImagePath == freezed
           ? _value.characterImagePath
           : characterImagePath as String,
+      characterImageEffect: characterImageEffect == freezed
+          ? _value.characterImageEffect
+          : characterImageEffect as String,
     ));
   }
 }
@@ -108,10 +127,12 @@ class _$_Sentence implements _Sentence {
   _$_Sentence(
       {@required this.characterName,
       @required this.body,
-      @required this.characterImagePath})
+      @required this.characterImagePath,
+      @required this.characterImageEffect})
       : assert(characterName != null),
         assert(body != null),
-        assert(characterImagePath != null);
+        assert(characterImagePath != null),
+        assert(characterImageEffect != null);
 
   factory _$_Sentence.fromJson(Map<String, dynamic> json) =>
       _$_$_SentenceFromJson(json);
@@ -122,10 +143,12 @@ class _$_Sentence implements _Sentence {
   final String body;
   @override
   final String characterImagePath;
+  @override
+  final String characterImageEffect;
 
   @override
   String toString() {
-    return 'Sentence(characterName: $characterName, body: $body, characterImagePath: $characterImagePath)';
+    return 'Sentence(characterName: $characterName, body: $body, characterImagePath: $characterImagePath, characterImageEffect: $characterImageEffect)';
   }
 
   @override
@@ -139,7 +162,10 @@ class _$_Sentence implements _Sentence {
                 const DeepCollectionEquality().equals(other.body, body)) &&
             (identical(other.characterImagePath, characterImagePath) ||
                 const DeepCollectionEquality()
-                    .equals(other.characterImagePath, characterImagePath)));
+                    .equals(other.characterImagePath, characterImagePath)) &&
+            (identical(other.characterImageEffect, characterImageEffect) ||
+                const DeepCollectionEquality()
+                    .equals(other.characterImageEffect, characterImageEffect)));
   }
 
   @override
@@ -147,7 +173,8 @@ class _$_Sentence implements _Sentence {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(characterName) ^
       const DeepCollectionEquality().hash(body) ^
-      const DeepCollectionEquality().hash(characterImagePath);
+      const DeepCollectionEquality().hash(characterImagePath) ^
+      const DeepCollectionEquality().hash(characterImageEffect);
 
   @override
   _$SentenceCopyWith<_Sentence> get copyWith =>
@@ -163,7 +190,8 @@ abstract class _Sentence implements Sentence {
   factory _Sentence(
       {@required String characterName,
       @required String body,
-      @required String characterImagePath}) = _$_Sentence;
+      @required String characterImagePath,
+      @required String characterImageEffect}) = _$_Sentence;
 
   factory _Sentence.fromJson(Map<String, dynamic> json) = _$_Sentence.fromJson;
 
@@ -173,6 +201,8 @@ abstract class _Sentence implements Sentence {
   String get body;
   @override
   String get characterImagePath;
+  @override
+  String get characterImageEffect;
   @override
   _$SentenceCopyWith<_Sentence> get copyWith;
 }

@@ -11,6 +11,7 @@ _$_Sentence _$_$_SentenceFromJson(Map<String, dynamic> json) {
     characterName: json['characterName'] as String,
     body: json['body'] as String,
     characterImagePath: json['characterImagePath'] as String,
+    characterImageEffect: json['characterImageEffect'] as String,
   );
 }
 
@@ -19,4 +20,5 @@ Map<String, dynamic> _$_$_SentenceToJson(_$_Sentence instance) =>
       'characterName': instance.characterName,
       'body': instance.body,
       'characterImagePath': instance.characterImagePath,
+      'characterImageEffect': instance.characterImageEffect,
     };
