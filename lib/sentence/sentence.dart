@@ -10,6 +10,7 @@ abstract class Sentence with _$Sentence {
     @required String characterName,
     @required String body,
     @required String characterImagePath,
+    @required String characterImageEffect,
   }) = _Sentence;
 
   factory Sentence.fromJson(Map<String, dynamic> json) =>
