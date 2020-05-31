@@ -168,9 +168,22 @@ class _$_SentenceState implements _SentenceState {
     return _currentCharecterName;
   }
 
+  bool _didcurrentCharecterImageEffect = false;
+  String _currentCharecterImageEffect;
+
+  @override
+  String get currentCharecterImageEffect {
+    if (_didcurrentCharecterImageEffect == false) {
+      _didcurrentCharecterImageEffect = true;
+      _currentCharecterImageEffect =
+          sentenceList[sentenceIndex].characterImageEffect;
+    }
+    return _currentCharecterImageEffect;
+  }
+
   @override
   String toString() {
-    return 'SentenceState(sentenceList: $sentenceList, sentenceIndex: $sentenceIndex, sentenceListLength: $sentenceListLength, isLastSentence: $isLastSentence, currentSentence: $currentSentence, currentCharecterImagePath: $currentCharecterImagePath, currentCharecterName: $currentCharecterName)';
+    return 'SentenceState(sentenceList: $sentenceList, sentenceIndex: $sentenceIndex, sentenceListLength: $sentenceListLength, isLastSentence: $isLastSentence, currentSentence: $currentSentence, currentCharecterImagePath: $currentCharecterImagePath, currentCharecterName: $currentCharecterName, currentCharecterImageEffect: $currentCharecterImageEffect)';
   }
 
   @override
