@@ -1,11 +1,11 @@
 import 'package:flutter_state_management/sentence/sentence.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'sentence_state.freezed.dart';
+part 'sentence_collection.freezed.dart';
 
 @freezed
-abstract class SentenceState with _$SentenceState {
-  factory SentenceState(
+abstract class SentenceCollection with _$SentenceCollection {
+  factory SentenceCollection(
       {@required List<Sentence> sentenceList,
       @required int sentenceIndex}) = _SentenceState;
 

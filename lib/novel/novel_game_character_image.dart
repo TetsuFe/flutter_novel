@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_state_management/novel/v_tween_animation_container.dart';
-import 'package:flutter_state_management/sentence/sentence_state.dart';
+import 'package:flutter_state_management/sentence/sentence_collection.dart';
 import 'package:meta/meta.dart';
 import 'package:provider/provider.dart';
 
@@ -9,8 +9,9 @@ class NovelGameCharacterImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(child: Builder(
       builder: (_) {
-        final currentCharecterImagePath = context
-            .select<SentenceState, String>((s) => s.currentCharecterImagePath);
+        final currentCharecterImagePath =
+            context.select<SentenceCollection, String>(
+                (s) => s.currentCharecterImagePath);
         if (currentCharecterImagePath ==
             'assets/character_images/ypose_hokuma.png') {
           return Container(
@@ -19,7 +20,7 @@ class NovelGameCharacterImage extends StatelessWidget {
             child: VTweetAnimationContainer(
               child: ZoomedCharacterImageContainer(
                 charecterImagePath: currentCharecterImagePath,
-                zoomLevel: context.select<SentenceState, String>(
+                zoomLevel: context.select<SentenceCollection, String>(
                     (s) => s.currentCharecterImageEffect),
               ),
             ),
@@ -27,7 +28,7 @@ class NovelGameCharacterImage extends StatelessWidget {
         }
         return ZoomedCharacterImageContainer(
           charecterImagePath: currentCharecterImagePath,
-          zoomLevel: context.select<SentenceState, String>(
+          zoomLevel: context.select<SentenceCollection, String>(
               (s) => s.currentCharecterImageEffect),
         );
       },
