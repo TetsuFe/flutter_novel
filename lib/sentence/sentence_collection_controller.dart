@@ -1,19 +1,12 @@
 import 'package:flutter_state_management/sentence/sentence.dart';
-import 'package:flutter_state_management/sentence/sentence_state.dart';
+import 'package:flutter_state_management/sentence/sentence_collection.dart';
 import 'package:flutter_state_management/story/story_api.dart';
 import 'package:meta/meta.dart';
 import 'package:state_notifier/state_notifier.dart';
 
-class SentenceStateNotifier extends StateNotifier<SentenceState>
+class SentenceCollectionContoller extends StateNotifier<SentenceCollection>
     with LocatorMixin {
-  SentenceStateNotifier({@required this.storyId})
-      : super(SentenceState(sentenceIndex: 0, sentenceList: [
-          Sentence(
-              characterName: '',
-              body: '',
-              characterImagePath: '',
-              characterImageEffect: '')
-        ]));
+  SentenceCollectionContoller({@required this.storyId}) : super(null);
 
   final int storyId;
 
@@ -22,9 +15,9 @@ class SentenceStateNotifier extends StateNotifier<SentenceState>
     try {
       final sentenceList =
           await StoryApi().getStorySentenceList(storyId.toString());
-      state = state.copyWith(sentenceList: sentenceList);
+      state = SentenceCollection(sentenceIndex: 0, sentenceList: sentenceList);
     } on Exception {
-      state = state.copyWith(sentenceList: [
+      state = SentenceCollection(sentenceIndex: 0, sentenceList: [
         Sentence(
           characterName: 'ホクマ',
           body: 'state_notifierとfreezedを使ったサンプルを書いたクマ！',

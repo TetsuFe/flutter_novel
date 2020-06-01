@@ -1,7 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
-part of 'sentence_state.dart';
+part of 'sentence_collection.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -9,8 +9,8 @@ part of 'sentence_state.dart';
 
 T _$identity<T>(T value) => value;
 
-class _$SentenceStateTearOff {
-  const _$SentenceStateTearOff();
+class _$SentenceCollectionTearOff {
+  const _$SentenceCollectionTearOff();
 
   _SentenceState call(
       {@required List<Sentence> sentenceList, @required int sentenceIndex}) {
@@ -22,29 +22,29 @@ class _$SentenceStateTearOff {
 }
 
 // ignore: unused_element
-const $SentenceState = _$SentenceStateTearOff();
+const $SentenceCollection = _$SentenceCollectionTearOff();
 
-mixin _$SentenceState {
+mixin _$SentenceCollection {
   List<Sentence> get sentenceList;
   int get sentenceIndex;
 
-  $SentenceStateCopyWith<SentenceState> get copyWith;
+  $SentenceCollectionCopyWith<SentenceCollection> get copyWith;
 }
 
-abstract class $SentenceStateCopyWith<$Res> {
-  factory $SentenceStateCopyWith(
-          SentenceState value, $Res Function(SentenceState) then) =
-      _$SentenceStateCopyWithImpl<$Res>;
+abstract class $SentenceCollectionCopyWith<$Res> {
+  factory $SentenceCollectionCopyWith(
+          SentenceCollection value, $Res Function(SentenceCollection) then) =
+      _$SentenceCollectionCopyWithImpl<$Res>;
   $Res call({List<Sentence> sentenceList, int sentenceIndex});
 }
 
-class _$SentenceStateCopyWithImpl<$Res>
-    implements $SentenceStateCopyWith<$Res> {
-  _$SentenceStateCopyWithImpl(this._value, this._then);
+class _$SentenceCollectionCopyWithImpl<$Res>
+    implements $SentenceCollectionCopyWith<$Res> {
+  _$SentenceCollectionCopyWithImpl(this._value, this._then);
 
-  final SentenceState _value;
+  final SentenceCollection _value;
   // ignore: unused_field
-  final $Res Function(SentenceState) _then;
+  final $Res Function(SentenceCollection) _then;
 
   @override
   $Res call({
@@ -63,7 +63,7 @@ class _$SentenceStateCopyWithImpl<$Res>
 }
 
 abstract class _$SentenceStateCopyWith<$Res>
-    implements $SentenceStateCopyWith<$Res> {
+    implements $SentenceCollectionCopyWith<$Res> {
   factory _$SentenceStateCopyWith(
           _SentenceState value, $Res Function(_SentenceState) then) =
       __$SentenceStateCopyWithImpl<$Res>;
@@ -72,7 +72,7 @@ abstract class _$SentenceStateCopyWith<$Res>
 }
 
 class __$SentenceStateCopyWithImpl<$Res>
-    extends _$SentenceStateCopyWithImpl<$Res>
+    extends _$SentenceCollectionCopyWithImpl<$Res>
     implements _$SentenceStateCopyWith<$Res> {
   __$SentenceStateCopyWithImpl(
       _SentenceState _value, $Res Function(_SentenceState) _then)
@@ -183,7 +183,7 @@ class _$_SentenceState implements _SentenceState {
 
   @override
   String toString() {
-    return 'SentenceState(sentenceList: $sentenceList, sentenceIndex: $sentenceIndex, sentenceListLength: $sentenceListLength, isLastSentence: $isLastSentence, currentSentence: $currentSentence, currentCharecterImagePath: $currentCharecterImagePath, currentCharecterName: $currentCharecterName, currentCharecterImageEffect: $currentCharecterImageEffect)';
+    return 'SentenceCollection(sentenceList: $sentenceList, sentenceIndex: $sentenceIndex, sentenceListLength: $sentenceListLength, isLastSentence: $isLastSentence, currentSentence: $currentSentence, currentCharecterImagePath: $currentCharecterImagePath, currentCharecterName: $currentCharecterName, currentCharecterImageEffect: $currentCharecterImageEffect)';
   }
 
   @override
@@ -209,7 +209,7 @@ class _$_SentenceState implements _SentenceState {
       __$SentenceStateCopyWithImpl<_SentenceState>(this, _$identity);
 }
 
-abstract class _SentenceState implements SentenceState {
+abstract class _SentenceState implements SentenceCollection {
   factory _SentenceState(
       {@required List<Sentence> sentenceList,
       @required int sentenceIndex}) = _$_SentenceState;

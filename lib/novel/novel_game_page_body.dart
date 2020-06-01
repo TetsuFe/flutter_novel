@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_state_management/novel/collision_animated_novel_background.dart';
 import 'package:flutter_state_management/novel/novel_game_background_image.dart';
 import 'package:flutter_state_management/novel/novel_game_character_image.dart';
-import 'package:flutter_state_management/sentence/sentence_state.dart';
-import 'package:flutter_state_management/sentence/sentence_state_notifier.dart';
+import 'package:flutter_state_management/sentence/sentence_collection.dart';
+import 'package:flutter_state_management/sentence/sentence_collection_controller.dart';
 import 'package:provider/provider.dart';
 
 class NovelGamePageBody extends StatefulWidget {
@@ -53,18 +53,18 @@ class _NovelGamePageBodyState extends State<NovelGamePageBody> {
             alignment: Alignment.bottomCenter,
             child: GestureDetector(
               onTap: () {
-                if (context.read<SentenceState>().isLastSentence) {
+                if (context.read<SentenceCollection>().isLastSentence) {
                   setState(() {
                     _isReadingStoryFinished = true;
                   });
                 }
                 if (storyId == 3 &&
-                    context.read<SentenceState>().sentenceIndex == 1) {
+                    context.read<SentenceCollection>().sentenceIndex == 1) {
                   setState(() {
                     _isBackgroundAnimated = true;
                   });
                 }
-                context.read<SentenceStateNotifier>().goToNextSentence();
+                context.read<SentenceCollectionContoller>().goToNextSentence();
               },
               child: Padding(
                 padding: const EdgeInsets.only(left: 64, bottom: 32, right: 64),
@@ -73,10 +73,10 @@ class _NovelGamePageBodyState extends State<NovelGamePageBody> {
                   height: 100,
                   color: Colors.green[400].withAlpha(150),
                   child: Text(
-                    '【${context.select<SentenceState, String>((s) {
+                    '【${context.select<SentenceCollection, String>((s) {
                       return s.currentCharecterName;
                     })}】\n'
-                    '${context.select<SentenceState, String>((s) {
+                    '${context.select<SentenceCollection, String>((s) {
                       return s.currentSentence;
                     })}',
                     style: const TextStyle(color: Colors.white, fontSize: 16),
