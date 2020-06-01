@@ -6,14 +6,7 @@ import 'package:state_notifier/state_notifier.dart';
 
 class SentenceStateNotifier extends StateNotifier<SentenceState>
     with LocatorMixin {
-  SentenceStateNotifier({@required this.storyId})
-      : super(SentenceState(sentenceIndex: 0, sentenceList: [
-          Sentence(
-              characterName: '',
-              body: '',
-              characterImagePath: '',
-              characterImageEffect: '')
-        ]));
+  SentenceStateNotifier({@required this.storyId}) : super(null);
 
   final int storyId;
 
@@ -22,9 +15,9 @@ class SentenceStateNotifier extends StateNotifier<SentenceState>
     try {
       final sentenceList =
           await StoryApi().getStorySentenceList(storyId.toString());
-      state = state.copyWith(sentenceList: sentenceList);
+      state = SentenceState(sentenceIndex: 0, sentenceList: sentenceList);
     } on Exception {
-      state = state.copyWith(sentenceList: [
+      state = SentenceState(sentenceIndex: 0, sentenceList: [
         Sentence(
           characterName: 'ホクマ',
           body: 'state_notifierとfreezedを使ったサンプルを書いたクマ！',
