@@ -1,3 +1,6 @@
+import 'dart:html';
+import 'dart:ui' as ui;
+
 import 'package:flutter/material.dart';
 import 'package:flutter_state_management/story/story.dart';
 import 'package:flutter_state_management/story/story_api.dart';
@@ -10,6 +13,25 @@ import 'package:url_launcher/url_launcher.dart';
 class StoryListPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    // ignore: undefined_prefixed_name
+    ui.platformViewRegistry.registerViewFactory('add_nend_script_1',
+        (int viewId) {
+      final element = ScriptElement()
+        ..src = 'https://js1.nend.net/js/nendAdLoader.js'
+        ..type = 'text/javascript';
+      return element;
+    });
+
+    // ignore: undefined_prefixed_name
+    ui.platformViewRegistry.registerViewFactory('add_nend_script_2',
+        (int viewId) {
+      final element = ScriptElement()
+        ..text = 'var nend_params = {"media":66283,'
+            '"site":338979,"spot":1003266,"type":1,"oriented":1};'
+        ..type = 'text/javascript';
+      return element;
+    });
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('ストーリー選択'),
@@ -66,6 +88,16 @@ class StoryListPage extends StatelessWidget {
                   ),
                 ),
               ),
+            ),
+            const SizedBox(
+              width: 0,
+              height: 0,
+              child: HtmlElementView(viewType: 'add_nend_script_1'),
+            ),
+            const SizedBox(
+              width: 0,
+              height: 0,
+              child: HtmlElementView(viewType: 'add_nend_script_2'),
             ),
           ],
         ),
