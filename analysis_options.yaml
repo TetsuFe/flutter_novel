@@ -17,7 +17,7 @@ analyzer:
     - ios/**
     - lib/sentence/sentence.g.dart
     - lib/sentence/sentence.freezed.dart
-    - lib/sentence/sentence_state.freezed.dart
+    - lib/sentence/sentence_collection.freezed.dart
     - lib/story/story.g.dart
     - lib/story/story.freezed.dart
 linter:
