@@ -31,20 +31,14 @@ class StoryListPage extends StatelessWidget {
       final element = ScriptElement()
         ..async = true
         ..text = '(function() {'
-            '/*'
-            '*/'
             'var iframe = document.createElement("iframe");'
-            'var head = document.getElementsByTagName("body")[0];'
-            'head.appendChild(iframe);'
+            'var body = document.getElementsByTagName("body")[0];'
+            'body.appendChild(iframe);'
             'var html = "<body><script>var nend_params = {\'media\':66283,\'site\':338979,\'spot\':1003266,\'type\':1,\'oriented\':1};</script><script src=\'https://js1.nend.net/js/nendAdLoader.js\'></script></body>";'
-            //'var html = "<body><script src="https://js1.nend.net/js/nendAdLoader.js"><\/script><\/body>";'
-            //'var html2 = "<script>var nend_params = {"media":66283,"site":338979,"spot":1003266,"type":1,"oriented":1};</script>";'
             'var iframeDocument = iframe.contentWindow.document;'
             'iframeDocument.open();'
             'iframeDocument.write(html);'
             'iframeDocument.close();'
-            '/*'
-            '*/'
             '})();'
         ..type = 'text/javascript';
       return element;
