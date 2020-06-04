@@ -14,20 +14,38 @@ class StoryListPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // ignore: undefined_prefixed_name
+    /*
     ui.platformViewRegistry.registerViewFactory('add_nend_script_1',
         (int viewId) {
       final element = ScriptElement()
-        ..src = 'https://js1.nend.net/js/nendAdLoader.js'
+        ..async = true
+        //..src = 'https://js1.nend.net/js/nendAdLoader.js'
         ..type = 'text/javascript';
       return element;
     });
+     */
 
     // ignore: undefined_prefixed_name
     ui.platformViewRegistry.registerViewFactory('add_nend_script_2',
         (int viewId) {
       final element = ScriptElement()
-        ..text = 'var nend_params = {"media":66283,'
-            '"site":338979,"spot":1003266,"type":1,"oriented":1};'
+        ..async = true
+        ..text = '(function() {'
+            '/*'
+            '*/'
+            'var iframe = document.createElement("iframe");'
+            'var head = document.getElementsByTagName("body")[0];'
+            'head.appendChild(iframe);'
+            'var html = "<body><script>var nend_params = {\'media\':66283,\'site\':338979,\'spot\':1003266,\'type\':1,\'oriented\':1};</script><script src=\'https://js1.nend.net/js/nendAdLoader.js\'></script></body>";'
+            //'var html = "<body><script src="https://js1.nend.net/js/nendAdLoader.js"><\/script><\/body>";'
+            //'var html2 = "<script>var nend_params = {"media":66283,"site":338979,"spot":1003266,"type":1,"oriented":1};</script>";'
+            'var iframeDocument = iframe.contentWindow.document;'
+            'iframeDocument.open();'
+            'iframeDocument.write(html);'
+            'iframeDocument.close();'
+            '/*'
+            '*/'
+            '})();'
         ..type = 'text/javascript';
       return element;
     });
@@ -89,11 +107,13 @@ class StoryListPage extends StatelessWidget {
                 ),
               ),
             ),
+            /*
             const SizedBox(
               width: 0,
               height: 0,
               child: HtmlElementView(viewType: 'add_nend_script_1'),
             ),
+             */
             const SizedBox(
               width: 0,
               height: 0,
