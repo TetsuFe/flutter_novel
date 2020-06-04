@@ -43523,7 +43523,7 @@ return M.ZE(E.a0c(C.AY),E.a23(T.YP(H.b([new B.ri(new K.R1(),new V.mG().Ck(),t,u.
 K.R0.prototype={
 $1:function(a){var t=document.createElement("script")
 t.async=!0
-t.textContent="(function() {/**/var iframe = document.createElement(\"iframe\");var head = document.getElementsByTagName(\"body\")[0];head.appendChild(iframe);var html = \"<body><script>var nend_params = {'media':66283,'site':338979,'spot':1003266,'type':1,'oriented':1};</script><script src='https://js1.nend.net/js/nendAdLoader.js'></script></body>\";var iframeDocument = iframe.contentWindow.document;iframeDocument.open();iframeDocument.write(html);iframeDocument.close();/**/})();"
+t.textContent="(function() {var iframe = document.createElement(\"iframe\");var body = document.getElementsByTagName(\"body\")[0];body.appendChild(iframe);var html = \"<body><script>var nend_params = {'media':66283,'site':338979,'spot':1003266,'type':1,'oriented':1};</script><script src='https://js1.nend.net/js/nendAdLoader.js'></script></body>\";var iframeDocument = iframe.contentWindow.document;iframeDocument.open();iframeDocument.write(html);iframeDocument.close();})();"
 t.type="text/javascript"
 return t},
 $S:217}
