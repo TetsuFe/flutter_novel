@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_state_management/story_list_page.dart';
+import 'package:flutter_state_management/story/story_list.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class TopPage extends StatelessWidget {
