@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_state_management/story/story_list.dart';
+import 'package:flutter_state_management/user_question_chat/user_question_chat.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class TopPage extends StatelessWidget {
@@ -13,6 +14,10 @@ class TopPage extends StatelessWidget {
         child: Column(
           children: <Widget>[
             StoryList(),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 32),
+              child: UserQuestionChatArea(),
+            ),
             MyGithubLink(),
           ],
         ),
