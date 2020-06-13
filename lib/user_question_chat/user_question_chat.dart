@@ -8,9 +8,10 @@ import 'package:intl/date_symbol_data_local.dart';
 class UserQuestionChatArea extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final windowWidth = MediaQuery.of(context).size.width;
     return Row(
       children: [
-        Expanded(flex: 1, child: Container()),
+        windowWidth > 480 ? Expanded(flex: 1, child: Container()) : Container(),
         Expanded(
           flex: 4,
           child: SingleChildScrollView(
@@ -26,7 +27,7 @@ class UserQuestionChatArea extends StatelessWidget {
             ),
           ),
         ),
-        Expanded(flex: 1, child: Container()),
+        windowWidth > 480 ? Expanded(flex: 1, child: Container()) : Container(),
       ],
     );
   }
