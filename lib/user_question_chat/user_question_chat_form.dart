@@ -28,7 +28,7 @@ class _ChatFormState extends State<ChatForm> {
       child: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.all(35),
+            padding: const EdgeInsets.all(16),
             child: Center(
               child: TextField(
                 decoration: const InputDecoration(
@@ -39,7 +39,7 @@ class _ChatFormState extends State<ChatForm> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(35),
+            padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Center(
               child: TextFormField(
                 decoration: const InputDecoration(
@@ -53,7 +53,7 @@ class _ChatFormState extends State<ChatForm> {
                     return null;
                   }
                 },
-                maxLines: 6,
+                maxLines: 4,
               ),
             ),
           ),
