@@ -3,7 +3,6 @@ import 'package:flutter_state_management/common/standard_selectable_autolink_tex
 import 'package:flutter_state_management/user_question_chat/message.dart';
 import 'package:flutter_state_management/user_question_chat/user_question_chat_api.dart';
 import 'package:flutter_state_management/user_question_chat/user_question_chat_form.dart';
-import 'package:intl/date_symbol_data_local.dart';
 
 class UserQuestionChatArea extends StatelessWidget {
   @override
@@ -66,7 +65,6 @@ class MessageBubble extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    initializeDateFormatting('ja_JP');
     return Padding(
       padding: const EdgeInsets.only(right: 32, top: 8, bottom: 8),
       child: ListTile(
