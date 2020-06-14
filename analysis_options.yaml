@@ -1,7 +1,7 @@
 analyzer:
   strong-mode:
     implicit-casts: false
-    implicit-dynamic: false
+    implicit-dynamic: true
   errors:
     # treat missing required parameters as a warning (not a hint)
     missing_required_param: warning
@@ -20,6 +20,9 @@ analyzer:
     - lib/sentence/sentence_collection.freezed.dart
     - lib/story/story.g.dart
     - lib/story/story.freezed.dart
+    - lib/user_question_chat/message.dart
+    - lib/user_question_chat/message.freezed.dart
+    - lib/user_question_chat/message.g.dart
 linter:
   rules:
     - always_declare_return_types
@@ -134,7 +137,7 @@ linter:
     - throw_in_finally
     - type_annotate_public_apis # subset of always_specify_types
     - type_init_formals
-    - unawaited_futures # too many false positives
+    # - unawaited_futures # too many false positives
     - unnecessary_await_in_return # not yet tested
     - unnecessary_brace_in_string_interps
     - unnecessary_const

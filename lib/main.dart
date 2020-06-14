@@ -16,5 +16,6 @@ void main() {
       measurementId: 'G-B1DLNXQ4HN');
 
   analytics(firebaseApp);
+
   runApp(Provider(create: (_) => StoryApi(), child: RootApp()));
 }

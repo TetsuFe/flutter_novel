@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_state_management/story_list_page.dart';
+import 'package:flutter_state_management/top_page.dart';
 
 class RootApp extends StatelessWidget {
   @override
@@ -13,7 +13,7 @@ class RootApp extends StatelessWidget {
         primarySwatch: Colors.lightGreen,
         brightness: Brightness.dark,
       ),
-      home: StoryListPage(),
+      home: TopPage(),
     );
   }
 }

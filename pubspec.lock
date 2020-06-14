@@ -443,6 +443,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.5"
+  selectable_autolink_text:
+    dependency: "direct main"
+    description:
+      name: selectable_autolink_text
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.3.3"
   shelf:
     dependency: transitive
     description:
@@ -552,21 +559,21 @@ packages:
       name: test
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.14.3"
+    version: "1.14.7"
   test_api:
     dependency: transitive
     description:
       name: test_api
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.2.15"
+    version: "0.2.16"
   test_core:
     dependency: transitive
     description:
       name: test_core
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.3.4"
+    version: "0.3.7"
   timing:
     dependency: transitive
     description:
