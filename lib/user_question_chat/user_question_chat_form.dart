@@ -30,11 +30,19 @@ class _ChatFormState extends State<ChatForm> {
           Padding(
             padding: const EdgeInsets.all(16),
             child: Center(
-              child: TextField(
+              child: TextFormField(
                 decoration: const InputDecoration(
                   labelText: 'ユーザ名',
                 ),
                 controller: _usernameInputController,
+                maxLines: 1,
+                validator: (value) {
+                  if (value.isEmpty) {
+                    return '1文字以上入力してください。';
+                  } else {
+                    return null;
+                  }
+                },
               ),
             ),
           ),
