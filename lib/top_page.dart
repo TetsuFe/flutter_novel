@@ -14,10 +14,11 @@ class TopPage extends StatelessWidget {
         child: Column(
           children: <Widget>[
             StoryList(),
-            Padding(
+            Card(
+                child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 32),
               child: UserQuestionChatArea(),
-            ),
+            )),
             MyGithubLink(),
           ],
         ),
