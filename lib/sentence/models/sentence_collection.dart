@@ -1,4 +1,4 @@
-import 'package:flutter_state_management/sentence/sentence.dart';
+import 'package:flutter_state_management/sentence/models/sentence.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'sentence_collection.freezed.dart';

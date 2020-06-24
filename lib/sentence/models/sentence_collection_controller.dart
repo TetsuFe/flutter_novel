@@ -1,6 +1,6 @@
-import 'package:flutter_state_management/sentence/sentence.dart';
-import 'package:flutter_state_management/sentence/sentence_collection.dart';
-import 'package:flutter_state_management/story/story_api.dart';
+import 'package:flutter_state_management/sentence/models/sentence.dart';
+import 'package:flutter_state_management/sentence/models/sentence_collection.dart';
+import 'package:flutter_state_management/story/models/story_api.dart';
 import 'package:meta/meta.dart';
 import 'package:state_notifier/state_notifier.dart';
 

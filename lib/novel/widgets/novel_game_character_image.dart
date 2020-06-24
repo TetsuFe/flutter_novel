@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_state_management/novel/v_tween_animation_container.dart';
-import 'package:flutter_state_management/sentence/sentence_collection.dart';
+import 'package:flutter_state_management/novel/widgets/v_tween_animation_container.dart';
+import 'package:flutter_state_management/sentence/models/sentence_collection.dart';
 import 'package:meta/meta.dart';
 import 'package:provider/provider.dart';
 

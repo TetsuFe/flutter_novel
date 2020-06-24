@@ -15,14 +15,14 @@ analyzer:
   exclude:
     - lib/l10n/messages_*.dart
     - ios/**
-    - lib/sentence/sentence.g.dart
-    - lib/sentence/sentence.freezed.dart
-    - lib/sentence/sentence_collection.freezed.dart
-    - lib/story/story.g.dart
-    - lib/story/story.freezed.dart
-    - lib/user_question_chat/message.dart
-    - lib/user_question_chat/message.freezed.dart
-    - lib/user_question_chat/message.g.dart
+    - lib/sentence/models/sentence.g.dart
+    - lib/sentence/models/sentence.freezed.dart
+    - lib/sentence/models/sentence_collection.freezed.dart
+    - lib/story/models/story.g.dart
+    - lib/story/models/story.freezed.dart
+    - lib/user_question_chat/models/message.dart
+    - lib/user_question_chat/models/message.freezed.dart
+    - lib/user_question_chat/models/message.g.dart
 linter:
   rules:
     - always_declare_return_types

@@ -1,5 +1,5 @@
-import 'package:flutter_state_management/story/story.dart';
-import 'package:flutter_state_management/story/story_state_notifier.dart';
+import 'package:flutter_state_management/story/models/story.dart';
+import 'package:flutter_state_management/story/models/story_state_notifier.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
