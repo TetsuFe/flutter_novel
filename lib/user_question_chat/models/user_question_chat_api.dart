@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:firebase/firebase.dart' as fb;
 import 'package:firebase/firestore.dart';
-import 'package:flutter_state_management/user_question_chat/message.dart';
+import 'package:flutter_state_management/user_question_chat/models/message.dart';
 
 class UserQuestionChatApi {
   Future<bool> post({String username, String body}) async {
