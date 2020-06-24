@@ -10,9 +10,7 @@ _$_Message _$_$_MessageFromJson(Map<String, dynamic> json) {
   return _$_Message(
     username: json['username'] as String,
     body: json['body'] as String,
-    createdDate: json['createdDate'] == null
-        ? null
-        : DateTime.parse(json['createdDate'] as String),
+    createdDate: json['createdDate'] as DateTime,
   );
 }
 
