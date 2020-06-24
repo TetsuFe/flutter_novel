@@ -3,6 +3,7 @@ import 'package:flutter_state_management/common/standard_selectable_autolink_tex
 import 'package:flutter_state_management/user_question_chat/models/message.dart';
 import 'package:flutter_state_management/user_question_chat/models/user_question_chat_api.dart';
 import 'package:flutter_state_management/user_question_chat/widgets/user_question_chat_form.dart';
+import 'package:provider/provider.dart';
 
 class UserQuestionChatArea extends StatelessWidget {
   @override
@@ -36,7 +37,8 @@ class MessageListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return StreamBuilder(
-      stream: UserQuestionChatApi().allMessageSnapshot(),
+      stream: Provider.of<UserQuestionChatApi>(context, listen: false)
+          .allMessageSnapshot(),
       builder: (context, snapshot) {
         if (snapshot.hasError) {
           return const Text('エラーが発生しています');

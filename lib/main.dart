@@ -2,6 +2,7 @@ import 'package:firebase/firebase.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_state_management/app.dart';
 import 'package:flutter_state_management/story/models/story_api.dart';
+import 'package:flutter_state_management/user_question_chat/models/user_question_chat_api.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -17,5 +18,17 @@ void main() {
 
   analytics(firebaseApp);
 
-  runApp(Provider(create: (_) => StoryApi(), child: RootApp()));
+  runApp(
+    MultiProvider(
+      providers: [
+        Provider(
+          create: (_) => StoryApi(),
+          child: RootApp(),
+        ),
+        Provider(
+          create: (_) => UserQuestionChatApi(),
+        ),
+      ],
+    ),
+  );
 }
