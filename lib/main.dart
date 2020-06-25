@@ -23,12 +23,12 @@ void main() {
       providers: [
         Provider(
           create: (_) => StoryApi(),
-          child: RootApp(),
         ),
         Provider(
           create: (_) => UserQuestionChatApi(),
         ),
       ],
+      child: RootApp(),
     ),
   );
 }
