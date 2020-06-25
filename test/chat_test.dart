@@ -19,7 +19,7 @@ class MockUserQuestionChatApi extends Mock implements UserQuestionChatApi {
 }
 
 void main() {
-  testWidgets('chat list displaying widget test', (tester) async {
+  testWidgets('MessageListView widget test', (tester) async {
     final message = Message(
       username: 'testuser',
       body: 'こんにちは',
