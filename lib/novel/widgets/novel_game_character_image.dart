@@ -7,11 +7,12 @@ import 'package:provider/provider.dart';
 class NovelGameCharacterImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final currentCharecterImagePath = context
+        .select<SentenceCollection, String>((s) => s.currentCharecterImagePath);
+    final zoomLevel = context.select<SentenceCollection, String>(
+        (s) => s.currentCharecterImageEffect);
     return Center(child: Builder(
       builder: (_) {
-        final currentCharecterImagePath =
-            context.select<SentenceCollection, String>(
-                (s) => s.currentCharecterImagePath);
         if (currentCharecterImagePath ==
             'assets/character_images/ypose_hokuma.png') {
           return Container(
@@ -19,17 +20,14 @@ class NovelGameCharacterImage extends StatelessWidget {
             height: double.infinity,
             child: VTweetAnimationContainer(
               child: ZoomedCharacterImageContainer(
-                charecterImagePath: currentCharecterImagePath,
-                zoomLevel: context.select<SentenceCollection, String>(
-                    (s) => s.currentCharecterImageEffect),
-              ),
+                  charecterImagePath: currentCharecterImagePath,
+                  zoomLevel: zoomLevel),
             ),
           );
         }
         return ZoomedCharacterImageContainer(
           charecterImagePath: currentCharecterImagePath,
-          zoomLevel: context.select<SentenceCollection, String>(
-              (s) => s.currentCharecterImageEffect),
+          zoomLevel: zoomLevel,
         );
       },
     ));
