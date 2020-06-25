@@ -24,7 +24,7 @@ jobs:
       run: |
         flutter pub get
         flutter analyze
-        flutter test --coverage
+        flutter test --platform chrome --coverage
     - name: upload coverage
       uses: codecov/codecov-action@v1
       with:
