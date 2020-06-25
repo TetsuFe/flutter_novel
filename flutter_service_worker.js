@@ -3,14 +3,14 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "main.dart.js": "f575154d02fa2018f4aac7078a3e3d65",
+  "main.dart.js": "a7f8910e146377eee501b21751d49f37",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "manifest.json": "10650a18edaf253be7032f884bc3da07",
 "assets/fonts/MaterialIcons-Regular.ttf": "56d3ffdef7a25659eab6a68a3fbfaf16",
 "assets/background_images/hallway.jpg": "4578b01647f4587136d1d15072138a21",
 "assets/background_images/classroom.jpg": "4f1dcb1c6e9677c50ce3ed4696fa068d",
 "assets/FontManifest.json": "01700ba55b08a6141f33e168c4a6c22f",
-"assets/NOTICES": "e42223b4d9b4a686559921419b22d6bd",
+"assets/NOTICES": "c2853b0ec0b0dc9845193c350b60b8e6",
 "assets/character_images/neutral_hokuma.png": "1e1b69db9db9f4659e0e2bb5c9c0b3b4",
 "assets/character_images/ypose_hokuma.png": "8d94cbfaa5e0c33f02b53ce35dab3574",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "115e937bb829a890521f72d2e664b632",
