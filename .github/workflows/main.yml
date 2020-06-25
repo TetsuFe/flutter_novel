@@ -17,16 +17,11 @@ jobs:
         java-version: '12.x'
     - uses: subosito/flutter-action@v1
       with:
-        flutter-version: '1.20.0-0.0.pre'
-        channel: 'dev'
+        channel: 'beta'
         # flutter-version: '1.17.0'
 
     - name: Flutter analyze and test
       run: |
-        curl https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-        echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
-        sudo apt update
-        sudo apt install google-chrome-stable
         flutter pub get
         flutter analyze
         flutter test --platform chrome --coverage
