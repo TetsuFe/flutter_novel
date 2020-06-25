@@ -7,6 +7,7 @@ import 'package:provider/provider.dart';
 class StoryDetailsBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final storyId = context.select<Story, int>((s) => s.id);
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       const SizedBox(height: 50),
       Text(
@@ -44,7 +45,7 @@ class StoryDetailsBody extends StatelessWidget {
               MaterialPageRoute(
                 builder: (_) {
                   return NovelGamePage(
-                    storyId: context.select<Story, int>((s) => s.id),
+                    storyId: storyId,
                   );
                 },
               ),
