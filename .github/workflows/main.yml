@@ -25,6 +25,7 @@ jobs:
       run: |
         flutter pub get
         flutter analyze
+        flutter update-packages --force-upgrade
         flutter test --platform chrome --coverage
     - name: upload coverage
       uses: codecov/codecov-action@v1
