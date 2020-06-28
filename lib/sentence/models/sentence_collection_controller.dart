@@ -9,12 +9,13 @@ class SentenceCollectionContoller extends StateNotifier<SentenceCollection>
   SentenceCollectionContoller({@required this.storyId}) : super(null);
 
   final int storyId;
+  StoryApi get _apiClient => read();
 
   @override
   Future<void> initState() async {
     try {
       final sentenceList =
-          await StoryApi().getStorySentenceList(storyId.toString());
+          await _apiClient.getStorySentenceList(storyId.toString());
       state = SentenceCollection(sentenceIndex: 0, sentenceList: sentenceList);
     } on Exception {
       state = SentenceCollection(sentenceIndex: 0, sentenceList: [
