@@ -10,7 +10,7 @@ class StoryList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return StreamBuilder(
-        stream: StoryApi().getStoryList(),
+        stream: Provider.of<StoryApi>(context, listen: false).getStoryList(),
         builder: (context, AsyncSnapshot<dynamic> snapshot) {
           if (!snapshot.hasData) {
             return const Center(child: CircularProgressIndicator());
