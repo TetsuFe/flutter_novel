@@ -60,4 +60,11 @@ class _VTweetAnimationContainerState extends State<VTweetAnimationContainer>
   Widget build(BuildContext context) {
     return AlignTransition(alignment: animation, child: child);
   }
+
+  @override
+  void dispose() {
+    super.dispose();
+    controller.dispose();
+    controller2.dispose();
+  }
 }
