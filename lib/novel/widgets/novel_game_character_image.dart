@@ -18,7 +18,7 @@ class NovelGameCharacterImage extends StatelessWidget {
           return Container(
             width: double.infinity,
             height: double.infinity,
-            child: VTweetAnimationContainer(
+            child: VTweenAnimationContainer(
               child: ZoomedCharacterImageContainer(
                   charecterImagePath: currentCharecterImagePath,
                   zoomLevel: zoomLevel),
