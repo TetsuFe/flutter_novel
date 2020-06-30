@@ -25,7 +25,6 @@ jobs:
       run: |
         flutter pub get
         flutter analyze
-        flutter update-packages --force-upgrade
         flutter test --coverage
         flutter test --platform chrome
     - name: upload coverage
