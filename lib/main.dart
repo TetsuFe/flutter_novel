@@ -21,12 +21,8 @@ void main() {
   runApp(
     MultiProvider(
       providers: [
-        Provider(
-          create: (_) => StoryApi(),
-        ),
-        Provider(
-          create: (_) => UserQuestionChatApi(),
-        ),
+        storyApiProvider,
+        userQuestionChatApiProvider,
       ],
       child: RootApp(),
     ),

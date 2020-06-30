@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 
-class VTweetAnimationContainer extends StatefulWidget {
-  const VTweetAnimationContainer({@required this.child});
+class VTweenAnimationContainer extends StatefulWidget {
+  const VTweenAnimationContainer({@required this.child});
 
   final Widget child;
 
   @override
-  _VTweetAnimationContainerState createState() =>
-      _VTweetAnimationContainerState(child: child);
+  _VTweenAnimationContainerState createState() =>
+      _VTweenAnimationContainerState(child: child);
 }
 
-class _VTweetAnimationContainerState extends State<VTweetAnimationContainer>
+class _VTweenAnimationContainerState extends State<VTweenAnimationContainer>
     with TickerProviderStateMixin {
-  _VTweetAnimationContainerState({@required this.child});
+  _VTweenAnimationContainerState({@required this.child});
 
   final Widget child;
   AnimationController controller;
@@ -59,5 +59,12 @@ class _VTweetAnimationContainerState extends State<VTweetAnimationContainer>
   @override
   Widget build(BuildContext context) {
     return AlignTransition(alignment: animation, child: child);
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    controller.dispose();
+    controller2.dispose();
   }
 }
