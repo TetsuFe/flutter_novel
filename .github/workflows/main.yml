@@ -28,6 +28,7 @@ jobs:
         # sudo apt-get update && sudo apt-get install -y --no-install-recommends google-chrome-stable
         flutter pub get
         flutter update-packages
+        flutter doctor
         flutter analyze
         flutter test --platform chrome
     - name: upload coverage
