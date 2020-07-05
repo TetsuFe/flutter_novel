@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_state_management/common/standard_selectable_autolink_text.dart';
-import 'package:flutter_state_management/user_question_chat/models/message.dart';
-import 'package:flutter_state_management/user_question_chat/models/user_question_chat_api.dart';
-import 'package:flutter_state_management/user_question_chat/widgets/user_question_chat_form.dart';
+import 'package:flutter_novel/common/standard_selectable_autolink_text.dart';
+import 'package:flutter_novel/user_question_chat/models/message.dart';
+import 'package:flutter_novel/user_question_chat/models/user_question_chat_api.dart';
+import 'package:flutter_novel/user_question_chat/widgets/user_question_chat_form.dart';
 import 'package:provider/provider.dart';
 
 class UserQuestionChatArea extends StatelessWidget {

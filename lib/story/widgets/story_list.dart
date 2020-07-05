@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_state_management/story/models/story.dart';
-import 'package:flutter_state_management/story/models/story_api.dart';
-import 'package:flutter_state_management/story/models/story_state_notifier.dart';
-import 'package:flutter_state_management/story/widgets/story_details_page.dart';
+import 'package:flutter_novel/story/models/story.dart';
+import 'package:flutter_novel/story/models/story_api.dart';
+import 'package:flutter_novel/story/models/story_state_notifier.dart';
+import 'package:flutter_novel/story/widgets/story_details_page.dart';
 import 'package:flutter_state_notifier/flutter_state_notifier.dart';
 import 'package:provider/provider.dart';
 

@@ -1,4 +1,4 @@
-import 'package:flutter_state_management/story/models/story.dart';
+import 'package:flutter_novel/story/models/story.dart';
 import 'package:state_notifier/state_notifier.dart';
 
 class StoryStateNotifier extends StateNotifier<Story> {

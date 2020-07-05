@@ -1,6 +1,6 @@
 import 'package:firebase/firebase.dart' as fb;
-import 'package:flutter_state_management/sentence/models/sentence.dart';
-import 'package:flutter_state_management/story/models/story.dart';
+import 'package:flutter_novel/sentence/models/sentence.dart';
+import 'package:flutter_novel/story/models/story.dart';
 import 'package:provider/provider.dart';
 
 class StoryApi {
