@@ -30,7 +30,8 @@ jobs:
         flutter pub get
         flutter doctor
         flutter analyze
-        flutter test --platform chrome
+        flutter test test/web --platform chrome
+        flutter test test/not_web --coverage
     - name: upload coverage
       uses: codecov/codecov-action@v1
       with:
