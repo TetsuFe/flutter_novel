@@ -27,6 +27,7 @@ jobs:
         echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
         sudo apt-get update && sudo apt-get install -y --no-install-recommends google-chrome-stable
         flutter pub get
+        flutter update-packages
         flutter analyze
         flutter test --platform chrome
     - name: upload coverage
