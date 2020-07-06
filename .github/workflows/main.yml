@@ -9,7 +9,7 @@ on:
 jobs:
   my-job:
     name: Flutter analyze and test and build web
-    runs-on: ubuntu-latest
+    runs-on: macos-10.15
     steps:
     - uses: actions/checkout@v1
     - uses: actions/setup-java@v1
@@ -23,10 +23,12 @@ jobs:
 
     - name: Flutter analyze and test
       run: |
+        flutter update-packages
         flutter pub get
+        flutter doctor
         flutter analyze
-        flutter update-packages --force-upgrade
-        flutter test --platform chrome --coverage
+        flutter test --platform chrome test/web
+        flutter test --coverage test/not_web
     - name: upload coverage
       uses: codecov/codecov-action@v1
       with:

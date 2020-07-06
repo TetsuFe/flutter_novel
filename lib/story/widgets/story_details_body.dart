@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_state_management/novel/widgets/novel_game_page.dart';
-import 'package:flutter_state_management/story/models/story.dart';
-import 'package:flutter_state_management/story/models/story_state_notifier.dart';
+import 'package:flutter_novel/novel/widgets/novel_game_page.dart';
+import 'package:flutter_novel/story/models/story.dart';
+import 'package:flutter_novel/story/models/story_state_notifier.dart';
 import 'package:provider/provider.dart';
 
 class StoryDetailsBody extends StatelessWidget {
