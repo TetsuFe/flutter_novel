@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_state_management/story/widgets/story_details_body.dart';
+import 'package:flutter_novel/story/widgets/story_details_body.dart';
 
 class StoryDetailsPage extends StatelessWidget {
   @override

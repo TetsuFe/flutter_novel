@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_state_management/top_page.dart';
+import 'package:flutter_novel/top_page.dart';
 
 class RootApp extends StatelessWidget {
   @override

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_state_management/story/widgets/story_list.dart';
-import 'package:flutter_state_management/user_question_chat/widgets/user_question_chat.dart';
+import 'package:flutter_novel/story/widgets/story_list.dart';
+import 'package:flutter_novel/user_question_chat/widgets/user_question_chat.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class TopPage extends StatelessWidget {
