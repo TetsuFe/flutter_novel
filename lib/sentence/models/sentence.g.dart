@@ -6,7 +6,7 @@ part of 'sentence.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Sentence _$_$_SentenceFromJson(Map<String, dynamic> json) {
+_$_Sentence _$_$_SentenceFromJson(Map json) {
   return _$_Sentence(
     characterName: json['characterName'] as String,
     body: json['body'] as String,
