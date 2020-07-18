@@ -1,0 +1,19 @@
+targets:
+  $default:
+    builders:
+      freezed:
+        generate_for:
+          include:
+            - lib/user_question_chat/models/message.dart
+            - lib/story/models/story.dart
+            - lib/sentence/models/sentence.dart
+            - lib/sentence/models/sentence_collection.dart
+      json_serializable:
+        generate_for:
+          include:
+            - lib/user_question_chat/models/message.dart
+            - lib/story/models/story.dart
+            - lib/sentence/models/sentence.dart
+        options:
+          any_map: true
+          explicit_to_json: true
