@@ -17,8 +17,7 @@ jobs:
         java-version: '12.x'
     - uses: subosito/flutter-action@v1
       with:
-        flutter-version: '1.20.0-2.0.pre'
-        channel: 'dev'
+        channel: 'beta'
         # flutter-version: '1.17.0'
 
     - name: Flutter analyze and test
