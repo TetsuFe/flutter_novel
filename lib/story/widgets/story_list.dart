@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_novel/story/models/story.dart';
 import 'package:flutter_novel/story/models/story_api.dart';
-import 'package:flutter_novel/story/models/story_state_notifier.dart';
+import 'package:flutter_novel/story/story_provider.dart';
 import 'package:flutter_novel/story/widgets/story_details_page.dart';
-import 'package:flutter_state_notifier/flutter_state_notifier.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class StoryList extends StatelessWidget {
+class StoryList extends ConsumerWidget {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context,
+      T Function<T>(ProviderBase<Object, T> provider) watch) {
     return StreamBuilder(
-        stream: Provider.of<StoryApi>(context, listen: false).getStoryList(),
+        stream: watch(storyApiProvider).getStoryList(),
         builder: (context, AsyncSnapshot<dynamic> snapshot) {
           if (!snapshot.hasData) {
             return const Center(child: CircularProgressIndicator());
@@ -27,12 +27,10 @@ class StoryList extends StatelessWidget {
                     Navigator.of(context).push<MaterialPageRoute>(
                       MaterialPageRoute(
                         builder: (context) {
-                          return MultiProvider(
-                            providers: [
-                              StateNotifierProvider<StoryStateNotifier, Story>(
-                                create: (_) =>
-                                    StoryStateNotifier(storyList[index]),
-                              )
+                          return ProviderScope(
+                            overrides: [
+                              storyProvider
+                                  .overrideAs((ref) => storyList[index])
                             ],
                             child: StoryDetailsPage(),
                           );

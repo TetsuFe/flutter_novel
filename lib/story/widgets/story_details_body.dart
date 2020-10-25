@@ -1,58 +1,59 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_novel/novel/widgets/novel_game_page.dart';
-import 'package:flutter_novel/story/models/story.dart';
 import 'package:flutter_novel/story/models/story_state_notifier.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter_novel/story/story_provider.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class StoryDetailsBody extends StatelessWidget {
+class StoryDetailsBody extends ConsumerWidget {
   @override
-  Widget build(BuildContext context) {
-    final storyId = context.select<Story, int>((s) => s.id);
+  Widget build(BuildContext context,
+      T Function<T>(ProviderBase<Object, T> provider) watch) {
+    final story = watch(storyProvider);
+    final storyStateNotifier = watch(storyStateNotifierProvider(story));
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       const SizedBox(height: 50),
       Text(
-        '${context.select<Story, String>((s) => s.title)}',
+        '${story.title}',
         style: Theme.of(context).textTheme.headline2,
       ),
       Row(
         children: [
           Checkbox(
-            value: context.select<Story, bool>((s) => s.isRead),
+            value: story.isRead,
             onChanged: null,
           ),
           Text(
-            context.select<Story, bool>((s) => s.isRead) ? '既読' : '未読',
+            story.isRead ? '既読' : '未読',
           ),
         ],
       ),
       Image.network(
-        context.select<Story, String>((s) => s.thumbnailImagePath),
+        story.thumbnailImagePath,
       ),
       const SizedBox(height: 50),
       Text(
-        context.select<Story, String>((s) => s.summary),
+        story.summary,
       ),
       const SizedBox(height: 50),
       Align(
-        alignment: Alignment.centerRight,
-        child: FlatButton(
-          child: const Text('見る'),
-          color: Colors.lightGreen,
-          textColor: Colors.white,
-          onPressed: () {
-            context.read<StoryStateNotifier>().markAsRead();
-            Navigator.of(context).push<MaterialPageRoute>(
-              MaterialPageRoute(
-                builder: (_) {
-                  return NovelGamePage(
-                    storyId: storyId,
-                  );
-                },
-              ),
-            );
-          },
-        ),
-      ),
+          alignment: Alignment.centerRight,
+          child: FlatButton(
+            child: const Text('見る'),
+            color: Colors.lightGreen,
+            textColor: Colors.white,
+            onPressed: () {
+              Navigator.of(context).push<MaterialPageRoute>(
+                MaterialPageRoute(
+                  builder: (_) {
+                    storyStateNotifier.markAsRead();
+                    return NovelGamePage(
+                      storyId: story.id,
+                    );
+                  },
+                ),
+              );
+            },
+          )),
     ]);
   }
 }

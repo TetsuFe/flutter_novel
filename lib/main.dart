@@ -1,8 +1,8 @@
 import 'package:firebase/firebase.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_novel/app.dart';
-import 'package:flutter_novel/story/models/story_api.dart';
 import 'package:flutter_novel/user_question_chat/models/user_question_chat_api.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -19,12 +19,13 @@ void main() {
   analytics(firebaseApp);
 
   runApp(
-    MultiProvider(
-      providers: [
-        storyApiProvider,
-        userQuestionChatApiProvider,
-      ],
-      child: RootApp(),
+    ProviderScope(
+      child: MultiProvider(
+        providers: [
+          userQuestionChatApiProvider,
+        ],
+        child: RootApp(),
+      ),
     ),
   );
 }

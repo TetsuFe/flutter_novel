@@ -1,21 +1,24 @@
 import 'package:flutter_novel/sentence/models/sentence.dart';
 import 'package:flutter_novel/sentence/models/sentence_collection.dart';
 import 'package:flutter_novel/story/models/story_api.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:meta/meta.dart';
 import 'package:state_notifier/state_notifier.dart';
 
 class SentenceCollectionContoller extends StateNotifier<SentenceCollection>
     with LocatorMixin {
-  SentenceCollectionContoller({@required this.storyId}) : super(null);
+  SentenceCollectionContoller(
+      {@required this.storyId, @required this.storyApiClient})
+      : super(null);
 
   final int storyId;
-  StoryApi get _apiClient => read();
+  final StoryApi storyApiClient;
 
   @override
   Future<void> initState() async {
     try {
       final sentenceList =
-          await _apiClient.getStorySentenceList(storyId.toString());
+          await storyApiClient.getStorySentenceList(storyId.toString());
       state = SentenceCollection(sentenceIndex: 0, sentenceList: sentenceList);
     } on Exception {
       state = SentenceCollection(sentenceIndex: 0, sentenceList: [
