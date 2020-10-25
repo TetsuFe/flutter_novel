@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_novel/novel/widgets/novel_game_page_body.dart';
 import 'package:flutter_novel/sentence/models/sentence_collection.dart';
 import 'package:flutter_novel/sentence/models/sentence_collection_controller.dart';
+import 'package:flutter_novel/story/models/story_api.dart';
 import 'package:flutter_state_notifier/flutter_state_notifier.dart';
 import 'package:provider/provider.dart';
 
@@ -16,7 +17,8 @@ class NovelGamePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return StateNotifierProvider<SentenceCollectionContoller,
         SentenceCollection>(
-      create: (context) => SentenceCollectionContoller(storyId: storyId),
+      create: (context) => SentenceCollectionContoller(
+          storyId: storyId, storyApiClient: StoryApi()),
       child: Scaffold(
         body: Builder(builder: (_context) {
           return _context.watch<SentenceCollection>() == null
